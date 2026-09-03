@@ -290,7 +290,6 @@
                     "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                     "driverClass": "org.hsqldb.jdbcDriver",
                     "userName": "sa",
-                    "encryptedPassword": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..Qhhx3c_ZXGLns7AH2j4-Hg.TOSeRk9P3tJWg-OkLFDg6g.48EGglGzPrEk-l4Jre6yIA",
                     "allowMultiValueAttributes": false,
                     "name": "ProvisionerDS (sa)",
                     "connectionUrlTags": [
@@ -303,7 +302,8 @@
                     "minPoolSize": 10,
                     "maxPoolSize": 100,
                     "blockingTimeout": 5000,
-                    "idleTimeout": 5
+                    "idleTimeout": 5,
+                    "password": "secretpass"
                 },
                 {
                     "type": "LDAP",
@@ -315,7 +315,6 @@
                     "ldapType": "ACTIVE_DIRECTORY",
                     "bindAnonymously": false,
                     "userDN": "CN=Administrator,CN=Users,DC=krusty-krab,DC=lab",
-                    "encryptedPassword": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..-Styxkl-d02FYK6Oxp9AxQ.RI2iOSnTHzgYDj_JBc9kzA.SIlCNndFNPmqVdpFfJCb0Q",
                     "useSsl": false,
                     "useDnsSrvRecords": false,
                     "followLDAPReferrals": false,
@@ -344,7 +343,8 @@
                     "dnsTtl": 60000,
                     "ldapDnsSrvPrefix": "_ldap._tcp",
                     "ldapsDnsSrvPrefix": "_ldaps._tcp",
-                    "useStartTLS": false
+                    "useStartTLS": false,
+                    "password": "vUser1234!"
                 }
             ]
         },
@@ -580,26 +580,6 @@
                     "description": "An application used by the workforce",
                     "createdAt": "2025-01-01T00:00:00Z",
                     "updatedAt": "2025-01-01T00:00:00Z"
-                }
-            ]
-        },
-        {
-            "resourceType": "/administrativeAccounts",
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "username": "Administrator",
-                    "encryptedPassword": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..foPPMHLhG956pf-X1MCl5A.4P6eDouGmsrIhDcDj9igLj6YIrD9Cgx0LWo3wbpH3a1gl83ZhRSGNlh3kcKBd07AQSGPyen6h46g6TEdB9icVA.yH7I3O8aqvhbeA8iEAOsBg",
-                    "description": "Initial administrator user.",
-                    "auditor": false,
-                    "active": true,
-                    "roles": [
-                        "USER_ADMINISTRATOR",
-                        "ADMINISTRATOR",
-                        "DATA_COLLECTION_ADMINISTRATOR",
-                        "EXPRESSION_ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR"
-                    ]
                 }
             ]
         },
@@ -1225,8 +1205,8 @@
                     },
                     "clientAuth": {
                         "type": "SECRET",
-                        "encryptedSecret": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..b5TQ4y-kKrApegp0vU1Vug.-Q5lUCQ36lPOnQF1Mrrqod8eBy2NUo5WQsWzUOcxD5OUPkBEx0oyc_lqvzDfBOp_EoDLfuLmwiiWGAozf3-pju09uRHulFsdYl1qk6-vTOM.JQt0nE5g7sI1aQnNPQadiw",
-                        "secondarySecrets": []
+                        "secondarySecrets": [],
+                        "secret": "secret"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -1355,8 +1335,8 @@
                     },
                     "clientAuth": {
                         "type": "SECRET",
-                        "encryptedSecret": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..B15oPvlAvepn-eorc_pL6w.9vUbc2obnLlaf6GahnGzkxHfBgOmFr01kzy4wAIz497nVgXfFpfqE4A2AtEJpd5iaKNXFF5hGqbYmDDWSvc4J23MBVek5BjS3kkhs_XpTqM.GfDyJ9r8Zf06We4m8ZmT1Q",
-                        "secondarySecrets": []
+                        "secondarySecrets": [],
+                        "secret": "secret"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -1551,8 +1531,8 @@
                     },
                     "clientAuth": {
                         "type": "SECRET",
-                        "encryptedSecret": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..wdk_NzFH4qPzneyjnP4Bkw.fmUUERbcWy3wPezftfyLz1HInBTO4POLQprRRr-QfB3BZmV46qs5jKJ19YmAIC_DMWLJaVHR7c9Q5qyM8NrqJ0iYcJnffIiSONWjeoRdPM8.oIYccfUA_GkHc7B4nu2QpA",
-                        "secondarySecrets": []
+                        "secondarySecrets": [],
+                        "secret": "secret"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -1681,8 +1661,8 @@
                     },
                     "clientAuth": {
                         "type": "SECRET",
-                        "encryptedSecret": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..EmVkWKlSLWKaXgi3WnjljA.FzPEe7iU6O-gQggJST7KxK8wJLIIYiojFw7_EwNltUignXvRxN_RgRidUzpQk9ZyoiwMmxUlV-_boo18x09QvDhlklnr_trtuG9yiMEHUdQ.vTM1NGKhC_0jfdXFoy-GMA",
-                        "secondarySecrets": []
+                        "secondarySecrets": [],
+                        "secret": "secret"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -1748,8 +1728,8 @@
                     },
                     "clientAuth": {
                         "type": "SECRET",
-                        "encryptedSecret": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..R6uUiqfcuWcb2xBHpxZVyg.LlhGS6H4e8nyBWL0uEk5iI1eX7q_aggWyzhUMpzXnAJ6W5tHgJwaDX_q7yz6wOyANjTZwwzBrOdsYzW2VlQW0KnuIfNOeAu8hmVHNem9oWY.SbMhwY49yKKdCG94x5gmZA",
-                        "secondarySecrets": []
+                        "secondarySecrets": [],
+                        "secret": "secret"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -1813,8 +1793,8 @@
                     },
                     "clientAuth": {
                         "type": "SECRET",
-                        "encryptedSecret": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..VF2zBl002YNMi07Yr9iVVw.NW0_kiJXnoBTSnKVjBZuhyfthXg1hMQ3qegb_YzLEXxwu4_annwtURoFQrkwWivGAcbW-gHZiXbjVKidh9qcpS0ynAcRnHJDfLjsKOg62Q4.0ZKJfUe7WjpptOf4MEUV8w",
-                        "secondarySecrets": []
+                        "secondarySecrets": [],
+                        "secret": "secret"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -1881,8 +1861,8 @@
                     },
                     "clientAuth": {
                         "type": "SECRET",
-                        "encryptedSecret": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..WVY_aJ_y_fd1-MZ-AK6aZA.ZZdnRGp7vF0gCNSvy5iqnzA6ANaCjoR59tBwtLKl-v2U-sjdQsWKrfeXLyFFd1ih7jGsmPOTg0Wt6rzuU7qfwcKcwMVUfx7cVwFguiCbdBc.piU6qgvR07KYhx3EdjEuLg",
-                        "secondarySecrets": []
+                        "secondarySecrets": [],
+                        "secret": "secret"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -2076,8 +2056,8 @@
                     },
                     "clientAuth": {
                         "type": "SECRET",
-                        "encryptedSecret": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..ImMix5QQuZisWnz7WSMFdA.g4umDgDjRDCXT0LY4Ll7ypO6VvtExbIqerjUwl9FQDxcpQJ_HaZNKaXyGZYg7cMNVW4NIxW4FPSIfZOkdiSLRVe_97ApIF-SM3h3QPkN0LE.oukS1BbZzaufxZ8fDTpKDw",
-                        "secondarySecrets": []
+                        "secondarySecrets": [],
+                        "secret": "secret"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
