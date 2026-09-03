@@ -903,7 +903,11 @@
             "resourceType": "/oauth/accessTokenManagers/settings",
             "operationType": "SAVE",
             "items": [
-                {}
+                {
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    }
+                }
             ]
         },
         {
