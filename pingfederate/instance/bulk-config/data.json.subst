@@ -363,6 +363,46 @@
             ]
         },
         {
+            "resourceType": "/keyPairs/sslServer",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "id": "vtcm75en83g6v1r87ytm7lihi",
+                    "fileData": "MIIKYAIBAzCCCgoGCSqGSIb3DQEHAaCCCfsEggn3MIIJ8zCCBaoGCSqGSIb3DQEHAaCCBZsEggWXMIIFkzCCBY8GCyqGSIb3DQEMCgECoIIFQDCCBTwwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFFiWVoqcloPGlrOnwybXHD2MbeBiAgInEAIBIDAMBggqhkiG9w0CCQUAMB0GCWCGSAFlAwQBKgQQaRc88Bx7mezmn7KrIqNcXASCBNDEvxFYXlFXJxVTJpauXJXYowrVN-n0B9tnX4KdD6MPvrD6xCpYeJuBASxoS8paR5Bs_PnuE8qgf_9ku4CBrBv_2gg1SCdW4UTjRrLbsPv58lQc8xXXuxc0Rhf0AZ6X5ylzR8Cv9tsdmeoeuqoKlvztgPdJw7wBqTysToEQ2NacpbkGU9tJm3NmqtJFtlFUpCaCU_LN8isbaOFF9jKYnmATRQFYnyQGWhclBWgRuX3J9ONNO1VGvUvnwurZPYu0hFjtoI0GF4JFi95mChV5g01BUDwSPv3xjeDUzkywphoWmy8_CWrcMJA989OWfh6dUke-YGuIwtFwFoLy_CubFjcnJuf5H73hZ--pry4Gp9Pzid7vBYKTyJXftcOg2ebB3SUMW2EkhID-SFLyj7zcr9rLciAQCOXyJjRFG1qn5lq8a86nvNHVklT12VOGvrbt14-DlJZdzPenV6I6KvnDplIVnrd5gTxTM8IyFfDRj0Xh_8QQUEj6ZklVUK6bKFR-_joHHdrvrWjhVhQF3YXzxo0ub9nVL9cdAYSRB78jHCWX-D99jV_fSzGOVSj3FBwBP_P1P3qcVwU4j_rypN8mD0tOT6azn2ZHTvR_QQJDUz9A4H-3IqdvmQyyqDV3OkKqBcZ9-v7uWFfC-GXwsGbkaPEmOlVzBPr5FA8fTFEzI-t8Iw61arwgJnQ2rKuC-h_FXUyN30JMRw97MbkHhYcQq7ch323EjFtDW3vsaQ-10a1bA8LT4rN4Q8yfS_IJV62A1ZfhJPxJTucY2qMSq-G6tQGPTHolD0K6mHZ6_zyBqqCXLJURGVHVcBf215rGgDQ3Zwlk_LWXAlkCiAKEAnqhYrtQnu3ASbwQlqn--AROCKx91eMa8L7r5hpG-aaTyymXkZqHhsc8g6jUpwO8twdXuBEX_ZN1ijLf6lqtIYsdMBfe8zUkR3zEzKLFsJhLjTtlD3vZmIZWZ_R8pAwAnSCVLtg2kM2aFBqJb3KClzALPFyb3ZzZJX8Jfxah1xxZUfcVPFwp86FXor_Y4k9ECf-3Wuj64gk-QJWiMlR6CKoijuTulgzYBqWf0cYsIEnubPVhT80zKbb3sbye9BKzM5P4HhZJwt87M7104riVzAefNKFwBnxwKj6Z_IrwJmZ8n8hNP5U-3RdaaRjMsC59aFrRAV5QpKpaY7QbtrdwuFy2K6if5Urz61-ltb0btgLdhIh-ICVRnx2rhrNyNXZcZEcX0QC74L5okywTZNIVJz09myhQ4mDNgPINZy3pl0YkY0qU3yu09Xt5NeeFxQCO5lhdHBohoWUFxTCjcoWKE5ZjCoD7cLeShGmxUTkdi_wnrp1r11Uq_PcGIeclfjjw-fsvD_bBJ-VUkRSnicwmOW7CugsTESB3q04kTxMyAXWduKXC05Lr6GocR2Z0OIldEnh2S-FoBfaZN_QWWaHKK_psFPhaqJhgEvgGavbLXH3E7qww73F5qMcDLGNE614BuY6FaGzigwWqI-kEaAzt9DSIfF0oX_rUPz1Fy2ERDH2MQBUu97CeeJ60uALGey4k2tbDXHk4HUvGCP66ElDYEQvlv1z61WS7UYfVF67NdwuMA4dME2E2ScLSd9bIUuHUQoYTYi5UqeNSoryIWOgfPHPo9su7PDE8MBcGCSqGSIb3DQEJFDEKHggAcABpAG4AZzAhBgkqhkiG9w0BCRUxFAQSVGltZSAxNzg4NDY0MDAyMDgxMIIEQQYJKoZIhvcNAQcGoIIEMjCCBC4CAQAwggQnBgkqhkiG9w0BBwEwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFI8aw0Au3oulz8Q61jEQsNkDL1_gAgInEAIBIDAMBggqhkiG9w0CCQUAMB0GCWCGSAFlAwQBKgQQQqVWaNn1p4A09ijhCO_dn4CCA7Dnot5Rkz4wnw34AaB-9kw6RqaoQDdjtuwT-dRvQClWwYsibxG5ECBKUZBH-t653JsyT5Z24YSLnCQCPUkw1WERJsoF52fSxTsfTwPZxeadY_MEsK0g4uNiqSZ5-n2IqLFRwXFjIfLenMZSjq0XDMcFk72iffEd--MSmyv_W3gqA8lJSmBc8pC0CrYbaK4JI-JSiTNgxgeiEtMxDqXsOiqhN4lRxJukeTyeAUAMmr2zqgYE6alEbDlcekEItV0oxzCGOl4kovOATeuBdB_5cyesxqKJUgPc0BrPG4rPmQLS4xPd2nSgFw8Cell5DjhyPKW0cpY_bY16Teb5wZIQbLDouIzDfERZ_46-Geg0WyaqcFufY9BH7htCA4OJS5IHzrO3MQAFcmElqF9o_T_jJJil1AXF5hI0Uwi6RxQsSHPswXrYxyi2l5zDtsox-eoH-bdODPuxcjj3l96bUxYxQONZXZJB0jbCNYaOevVHup6jDjje_JGf5UqeImO9QEbcc2tkhCqKp8qpM_NfPzqzDildOmiwawK6cxVffuTt3CS0lswwhIGhelUx8wuo0Bw2REUVg1t3Scwwm_ILM809XAZ9N7iF-8MmIh81p5o8EYaydvvvRmOCBhBRWOatciUDlIoE62-34d4F64gnbDMIyh5fI1IZcmvvCXfasc1Smd751lAL-_xwaFR8_FJiUaOr537327ExwWmVxptZHhG00ENQt1zdDJkOvKKUr2e9Ii4hvABQ_AYHhUsI4qOPJw9Lo6C85Pq1OW395v1rrnvTiNkTeAH4LTZ0ov2GtD78O2hislaFcnmB9KzBm6W1TRihGimTSup49Z4bNqCgrSB_sxQXKVjtYDUKrBdteLI5pTiht9CbAv3tT8cRYfKf4bDnfxfflba9nLyik_I5ZXqIHKItxNYNPh5SpDeEHkjwWIZiacLvkRxeSuDwNQPNixwwkmZYTxdhjsIIhEL3F9-1PW2Ksm7Qj5n5yNsrToHaLobjLflQ41-u4pTDQ1RI4M10KsQk_0bjcn2gYZ74Cz4exItHDeJyyWWs5q5eEvPHJcNRhArGBuolbmZQZwv4Tno1mmRjYwhylEpiDwznfgEFw0zIrtxXPDcD7Oxqlwl4jIibDG6yI2ThdVBiBxR5XrB7ZdgyRrDbRdA1eVq9kruIyDa8m3LC7awytNCSsneA_WzlNYqru5Q_jVRk_LhLdmPvHvGFb78psvmzFULaBAUWBYzDTGvYwaHryljOaoD_N8T-DTBNMDEwDQYJYIZIAWUDBAIBBQAEIOiEddldndaQ07CeNSBP9h0QmaCMH-Ee4Iva26HNWsUqBBSlZwyCDgUZy6nUzxpmrNgUXHfwDwICJxA=",
+                    "format": "PKCS12",
+                    "encryptedPassword": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..hiTd4atr78v4FcUxpMJ34g.5f-hcWPqe67wDECugPUFMCqZsMRUdvOJ79gTggWY764.-Aa8PaVQMFlTNqa8QuzTRw"
+                }
+            ]
+        },
+        {
+            "resourceType": "/keyPairs/sslServer/settings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "runtimeServerCertRef": {
+                        "id": "vtcm75en83g6v1r87ytm7lihi",
+                        "location": "https://pf-admin.support-team-krusty-krab.dsp.lab/pf-admin-api/v1/keyPairs/sslServer/vtcm75en83g6v1r87ytm7lihi"
+                    },
+                    "adminConsoleCertRef": {
+                        "id": "vtcm75en83g6v1r87ytm7lihi",
+                        "location": "https://pf-admin.support-team-krusty-krab.dsp.lab/pf-admin-api/v1/keyPairs/sslServer/vtcm75en83g6v1r87ytm7lihi"
+                    },
+                    "activeRuntimeServerCerts": [
+                        {
+                            "id": "vtcm75en83g6v1r87ytm7lihi",
+                            "location": "https://pf-admin.support-team-krusty-krab.dsp.lab/pf-admin-api/v1/keyPairs/sslServer/vtcm75en83g6v1r87ytm7lihi"
+                        }
+                    ],
+                    "activeAdminConsoleCerts": [
+                        {
+                            "id": "vtcm75en83g6v1r87ytm7lihi",
+                            "location": "https://pf-admin.support-team-krusty-krab.dsp.lab/pf-admin-api/v1/keyPairs/sslServer/vtcm75en83g6v1r87ytm7lihi"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "resourceType": "/serverSettings",
             "operationType": "SAVE",
             "items": [
