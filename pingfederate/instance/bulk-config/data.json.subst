@@ -280,7 +280,7 @@
                     "saml2EntityId": "evaluation",
                     "saml1xIssuerId": "",
                     "wsfedRealm": "",
-                    "baseUrl": "${PF_ENGINE_PUBLIC_BASEURL}",
+                    "baseUrl": "https://pf.support-team-krusty-krab.dsp.lab",
                     "saml1xSourceId": ""
                 },
                 "contactInfo": {},
