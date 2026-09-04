@@ -10,6 +10,9 @@
 
 pf_admin_password="$(get_value PING_IDENTITY_PASSWORD true)"
 
+echo "DEBUG ROOT_USER=${ROOT_USER}"
+echo "DEBUG PING_IDENTITY_PASSWORD=${pf_admin_password}"
+
 tmp_trace_file=$(mktemp)
 api_output_file=$(mktemp)
 
