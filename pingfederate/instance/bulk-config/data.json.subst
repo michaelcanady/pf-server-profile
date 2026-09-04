@@ -484,6 +484,25 @@
             ]
         },
         {
+            "resourceType": "/administrativeAccounts",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "username": "administrator",
+                    "password": "${PING_IDENTITY_PASSWORD}",
+                    "description": "Initial administrator user.",
+                    "auditor": false,
+                    "active": true,
+                    "roles": [
+                        "EXPRESSION_ADMINISTRATOR",
+                        "USER_ADMINISTRATOR",
+                        "ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR"
+                    ]
+                }
+            ]
+        },
+        {
             "resourceType": "/serverSettings/wsTrustStsSettings",
             "operationType": "SAVE",
             "items": [
@@ -2260,4 +2279,7 @@
             ]
         }
     ]
-}
+}"
+    },
+    "annotations": null,
+    "meta
