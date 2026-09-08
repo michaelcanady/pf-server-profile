@@ -363,116 +363,6 @@
             ]
         },
         {
-            "resourceType": "/passwordCredentialValidators",
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "id": "krusty-krab-ldap-pcv",
-                    "name": "Krusty Krab LDAP PCV",
-                    "pluginDescriptorRef": {
-                        "id": "com.pingidentity.pf.pcv.ldap.LdapUsernamePasswordCredentialValidator"
-                    },
-                    "configuration": {
-                        "fields": [
-                            {
-                                "name": "LDAP Datastore",
-                                "value": "krusty-krab-ad"
-                            },
-                            {
-                                "name": "Search Base",
-                                "value": "CN=Users,DC=krusty-krab,DC=lab"
-                            },
-                            {
-                                "name": "Search Filter",
-                                "value": "sAMAccountName=${username}"
-                            },
-                            {
-                                "name": "Scope of Search",
-                                "value": "SUBTREE"
-                            }
-                        ],
-                        "tables": []
-                    },
-                    "attributeContract": {
-                        "coreAttributes": [
-                            {
-                                "name": "username"
-                            }
-                        ],
-                        "extendedAttributes": [
-                            {
-                                "name": "mail"
-                            },
-                            {
-                                "name": "cn"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "resourceType": "/idp/adapters",
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "id": "htmlFormAdapter",
-                    "name": "HTML Form Adapter",
-                    "pluginDescriptorRef": {
-                        "id": "com.pingidentity.adapters.html.form.HTMLFormIdpAuthnAdapter"
-                    },
-                    "configuration": {
-                        "fields": [
-                            {
-                                "name": "Challenge Retries",
-                                "value": "3"
-                            }
-                        ],
-                        "tables": [
-                            {
-                                "name": "Credential Validators",
-                                "rows": [
-                                    {
-                                        "fields": [
-                                            {
-                                                "name": "Password Credential Validator Instance",
-                                                "value": "krusty-krab-ldap-pcv"
-                                            }
-                                        ],
-                                        "defaultRow": false
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "attributeContract": {
-                        "coreAttributes": [
-                            {
-                                "name": "username",
-                                "masked": false,
-                                "pseudonym": true
-                            }
-                        ],
-                        "extendedAttributes": []
-                    },
-                    "attributeMapping": {
-                        "attributeSources": [],
-                        "attributeContractFulfillment": {
-                            "username": {
-                                "source": {
-                                    "type": "ADAPTER"
-                                },
-                                "value": "username"
-                            }
-                        },
-                        "issuanceCriteria": {
-                            "conditionalCriteria": []
-                        }
-                    }
-                }
-            ]
-        },
-        {
             "operationType": "SAVE",
             "items": [
                 {}
@@ -845,14 +735,7 @@
             "operationType": "SAVE",
             "items": [
                 {
-                    "defaultAuthenticationSources": [
-                        {
-                            "type": "IDP_ADAPTER",
-                            "sourceRef": {
-                                "id": "htmlFormAdapter"
-                            }
-                        }
-                    ],
+                    "defaultAuthenticationSources": [],
                     "failIfNoSelection": false,
                     "authnSelectionTrees": [],
                     "trackedHttpParameters": []
@@ -1653,48 +1536,6 @@
                     "accessTokenManagerRef": {
                         "id": "dspjwtatm",
                         "location": "https://pf-admin.support-team-krusty-krab.dsp.lab/pf-admin-api/v1/oauth/accessTokenManagers/dspjwtatm"
-                    }
-                },
-                {
-                    "id": "dspjwtatm-cc",
-                    "accessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "context": {
-                        "type": "CLIENT_CREDENTIALS",
-                        "contextRef": {
-                            "id": "dspjwtatm"
-                        }
-                    },
-                    "attributeSources": [],
-                    "attributeContractFulfillment": {
-                        "email": {
-                            "source": {
-                                "type": "NO_MAPPING"
-                            },
-                            "value": ""
-                        },
-                        "attributes.clearance": {
-                            "source": {
-                                "type": "NO_MAPPING"
-                            },
-                            "value": ""
-                        },
-                        "attributes.nationality": {
-                            "source": {
-                                "type": "NO_MAPPING"
-                            },
-                            "value": ""
-                        },
-                        "attributes.needToKnow": {
-                            "source": {
-                                "type": "NO_MAPPING"
-                            },
-                            "value": ""
-                        }
-                    },
-                    "issuanceCriteria": {
-                        "conditionalCriteria": []
                     }
                 }
             ]
