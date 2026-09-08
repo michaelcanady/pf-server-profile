@@ -654,7 +654,23 @@
                     "allowUnidentifiedClientROCreds": false,
                     "authorizationCodeTimeout": 60,
                     "persistentGrantLifetimeUnit": "DAYS",
-                    "scopes": [],
+                    "scopes": [
+                        {
+                            "name": "openid",
+                            "description": "OpenID Connect",
+                            "dynamic": false
+                        },
+                        {
+                            "name": "profile",
+                            "description": "OpenID Connect profile",
+                            "dynamic": false
+                        },
+                        {
+                            "name": "email",
+                            "description": "OpenID Connect email",
+                            "dynamic": false
+                        }
+                    ],
                     "scopeForOAuthGrantManagement": "",
                     "exclusiveScopes": [],
                     "bypassAuthorizationForApprovedGrants": false
