@@ -363,6 +363,75 @@
             ]
         },
         {
+            "resourceType": "/passwordCredentialValidators",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "id": "krustykrabpcv",
+                    "name": "Krusty Krab LDAP PCV",
+                    "pluginDescriptorRef": {
+                        "id": "org.sourceid.saml20.domain.LDAPUsernamePasswordCredentialValidator"
+                    },
+                    "configuration": {
+                        "fields": [
+                            {
+                                "name": "LDAP Datastore",
+                                "value": "krusty-krab-ad"
+                            },
+                            {
+                                "name": "Search Base",
+                                "value": "CN=Users,DC=krusty-krab,DC=lab"
+                            },
+                            {
+                                "name": "Search Filter",
+                                "value": "sAMAccountName=${username}"
+                            },
+                            {
+                                "name": "Scope of Search",
+                                "value": "Subtree"
+                            }
+                        ],
+                        "tables": [
+                            {
+                                "name": "Authentication Error Overrides",
+                                "rows": []
+                            }
+                        ]
+                    },
+                    "attributeContract": {
+                        "coreAttributes": [
+                            {
+                                "name": "username"
+                            },
+                            {
+                                "name": "DN"
+                            },
+                            {
+                                "name": "givenName"
+                            },
+                            {
+                                "name": "mail"
+                            }
+                        ],
+                        "extendedAttributes": [
+                            {
+                                "name": "sAMAccountName"
+                            },
+                            {
+                                "name": "clearance"
+                            },
+                            {
+                                "name": "nationality"
+                            },
+                            {
+                                "name": "needToKnow"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
             "operationType": "SAVE",
             "items": [
                 {}
