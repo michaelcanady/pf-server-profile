@@ -294,27 +294,73 @@
             "resourceType": "/keyPairs/oauthOpenIdConnect"
         },
         {
+            "resourceType": "/dataStores",
             "operationType": "SAVE",
             "items": [
                 {
+                    "type": "JDBC",
+                    "id": "ProvisionerDS",
                     "maskAttributeValues": false,
+                    "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
+                    "driverClass": "org.hsqldb.jdbcDriver",
+                    "userName": "sa",
+                    "encryptedPassword": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..Qhhx3c_ZXGLns7AH2j4-Hg.TOSeRk9P3tJWg-OkLFDg6g.48EGglGzPrEk-l4Jre6yIA",
+                    "allowMultiValueAttributes": false,
+                    "name": "ProvisionerDS (sa)",
                     "connectionUrlTags": [
                         {
                             "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                             "defaultSource": true
                         }
                     ],
-                    "password": "${dataStores_items_ProvisionerDS_ProvisionerDS_password}",
-                    "allowMultiValueAttributes": false,
-                    "driverClass": "org.hsqldb.jdbcDriver",
-                    "name": "ProvisionerDS (sa)",
-                    "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
-                    "id": "ProvisionerDS",
-                    "type": "JDBC",
-                    "userName": "sa"
+                    "lastModified": "2026-09-03T18:53:40.398Z",
+                    "minPoolSize": 10,
+                    "maxPoolSize": 100,
+                    "blockingTimeout": 5000,
+                    "idleTimeout": 5
+                },
+                {
+                    "type": "LDAP",
+                    "id": "krusty-krab-ad",
+                    "maskAttributeValues": false,
+                    "hostnames": [
+                        "domain1.krusty-krab.lab:389"
+                    ],
+                    "ldapType": "ACTIVE_DIRECTORY",
+                    "bindAnonymously": false,
+                    "userDN": "CN=Administrator,CN=Users,DC=krusty-krab,DC=lab",
+                    "encryptedPassword": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..-Styxkl-d02FYK6Oxp9AxQ.RI2iOSnTHzgYDj_JBc9kzA.SIlCNndFNPmqVdpFfJCb0Q",
+                    "useSsl": false,
+                    "useDnsSrvRecords": false,
+                    "followLDAPReferrals": false,
+                    "name": "Krusty Krab Active Directory",
+                    "hostnamesTags": [
+                        {
+                            "hostnames": [
+                                "domain1.krusty-krab.lab:389"
+                            ],
+                            "defaultSource": true
+                        }
+                    ],
+                    "lastModified": "2026-09-03T19:29:56.54Z",
+                    "retryFailedOperations": false,
+                    "testOnBorrow": true,
+                    "testOnReturn": false,
+                    "createIfNecessary": true,
+                    "verifyHost": true,
+                    "minConnections": 10,
+                    "maxConnections": 100,
+                    "maxWait": -1,
+                    "timeBetweenEvictions": 60000,
+                    "readTimeout": 3000,
+                    "connectionTimeout": 3000,
+                    "binaryAttributes": [],
+                    "dnsTtl": 60000,
+                    "ldapDnsSrvPrefix": "_ldap._tcp",
+                    "ldapsDnsSrvPrefix": "_ldaps._tcp",
+                    "useStartTLS": false
                 }
-            ],
-            "resourceType": "/dataStores"
+            ]
         },
         {
             "operationType": "SAVE",
