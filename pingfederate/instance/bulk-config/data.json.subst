@@ -1,13 +1,16 @@
 {
     "metadata": {
-        "pfVersion": "10.1.2.0"
+        "pfVersion": "13.1.2.0"
     },
     "operations": [
         {
+            "resourceType": "/configStore",
             "operationType": "SAVE",
             "subResource": "com.pingidentity.crypto.LunaJCEManager",
             "items": [
                 {
+                    "id": "enabled-cipher-suites",
+                    "type": "MAP",
                     "mapValue": {
                         "TLS_RSA_WITH_AES_128_CBC_SHA256": "",
                         "TLS_RSA_WITH_AES_256_CBC_SHA256": "",
@@ -33,18 +36,18 @@
                         "TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256": "",
                         "TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256": "",
                         "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA": ""
-                    },
-                    "id": "enabled-cipher-suites",
-                    "type": "MAP"
+                    }
                 }
-            ],
-            "resourceType": "/configStore"
+            ]
         },
         {
+            "resourceType": "/configStore",
             "operationType": "SAVE",
             "subResource": "com.pingidentity.crypto.NcipherJCEManager",
             "items": [
                 {
+                    "id": "enabled-cipher-suites",
+                    "type": "MAP",
                     "mapValue": {
                         "TLS_RSA_WITH_AES_128_CBC_SHA256": "",
                         "TLS_RSA_WITH_AES_256_CBC_SHA256": "",
@@ -70,18 +73,18 @@
                         "TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256": "",
                         "TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256": "",
                         "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA": ""
-                    },
-                    "id": "enabled-cipher-suites",
-                    "type": "MAP"
+                    }
                 }
-            ],
-            "resourceType": "/configStore"
+            ]
         },
         {
+            "resourceType": "/configStore",
             "operationType": "SAVE",
             "subResource": "com.pingidentity.crypto.SunJCEManager",
             "items": [
                 {
+                    "id": "enabled-cipher-suites",
+                    "type": "MAP",
                     "mapValue": {
                         "TLS_RSA_WITH_AES_128_CBC_SHA256": "",
                         "TLS_AES_128_GCM_SHA256": "",
@@ -100,198 +103,222 @@
                         "TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256": "",
                         "TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256": "",
                         "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA": ""
-                    },
-                    "id": "enabled-cipher-suites",
-                    "type": "MAP"
+                    }
                 }
-            ],
-            "resourceType": "/configStore"
+            ]
         },
         {
-            "itemIds": [
-                "client_id"
-            ],
+            "resourceType": "/configStore",
             "operationType": "DELETE",
             "subResource": "http-request-parameter-validation",
-            "resourceType": "/configStore"
+            "itemIds": [
+                "client_id"
+            ]
         },
         {
+            "resourceType": "/configStore",
             "operationType": "SAVE",
             "subResource": "org.sourceid.common.ExpressionManager",
             "items": [
                 {
-                    "stringValue": "",
                     "id": "evaluateExpressions",
-                    "type": "STRING"
+                    "type": "STRING",
+                    "stringValue": ""
                 }
-            ],
-            "resourceType": "/configStore"
+            ]
         },
         {
+            "resourceType": "/configStore",
             "operationType": "SAVE",
             "subResource": "org.sourceid.oauth20.domain.ClientManagerXmlFileImpl",
             "items": [
                 {
-                    "stringValue": "true",
                     "id": "MigrationComplete8.4",
-                    "type": "STRING"
+                    "type": "STRING",
+                    "stringValue": "true"
                 }
-            ],
-            "resourceType": "/configStore"
+            ]
         },
         {
+            "resourceType": "/configStore",
+            "operationType": "SAVE",
+            "subResource": "org.sourceid.saml20.domain.LoggingMode",
+            "items": [
+                {
+                    "id": "IdPOverrideOn",
+                    "type": "STRING",
+                    "stringValue": "false"
+                },
+                {
+                    "id": "SPOverrideOn",
+                    "type": "STRING",
+                    "stringValue": "false"
+                }
+            ]
+        },
+        {
+            "resourceType": "/configStore",
             "operationType": "SAVE",
             "subResource": "org.sourceid.saml20.domain.mgmt.AdminUserManager",
             "items": [
                 {
-                    "stringValue": "true",
+                    "id": "isDcRoleUpdated",
+                    "type": "STRING",
+                    "stringValue": "true"
+                },
+                {
                     "id": "isEaRoleUpdated",
-                    "type": "STRING"
+                    "type": "STRING",
+                    "stringValue": "true"
                 }
-            ],
-            "resourceType": "/configStore"
+            ]
         },
         {
+            "resourceType": "/configStore",
             "operationType": "SAVE",
             "subResource": "org.sourceid.saml20.domain.mgmt.impl.PartnerCertMigrator",
             "items": [
                 {
-                    "stringValue": "true",
                     "id": "partner.cert.migration.complete",
-                    "type": "STRING"
+                    "type": "STRING",
+                    "stringValue": "true"
                 }
-            ],
-            "resourceType": "/configStore"
+            ]
         },
         {
+            "resourceType": "/configStore",
             "operationType": "SAVE",
             "subResource": "org.sourceid.saml20.metadata.partner.impl.MetadataDirectoryHybridDbImpl",
             "items": [
                 {
-                    "stringValue": "true",
                     "id": "MigrationComplete8.4",
-                    "type": "STRING"
+                    "type": "STRING",
+                    "stringValue": "true"
                 }
-            ],
-            "resourceType": "/configStore"
+            ]
         },
         {
+            "resourceType": "/configStore",
             "operationType": "SAVE",
             "subResource": "org.sourceid.saml20.service.impl.PseudonymServiceSha1Impl",
             "items": [
                 {
-                    "stringValue": "VXBlGWDvv70=",
                     "id": "entropy",
-                    "type": "STRING"
+                    "type": "STRING",
+                    "stringValue": "VXBlGWDvv70="
                 }
-            ],
-            "resourceType": "/configStore"
+            ]
         },
         {
-            "itemIds": [
-                "EmptySessionReplayRetentionSecs"
-            ],
+            "resourceType": "/configStore",
             "operationType": "DELETE",
             "subResource": "org.sourceid.saml20.service.session.StoredSessionServiceImpl",
-            "resourceType": "/configStore"
+            "itemIds": [
+                "EmptySessionReplayRetentionSecs"
+            ]
         },
         {
+            "resourceType": "/configStore",
+            "operationType": "DELETE",
+            "subResource": "org.sourceid.servlet.filter.SimultaneousAuthnRequestCheckingFilter",
             "itemIds": [
                 "browser-id-cookie-httponly-flag",
                 "browser-id-cookie-secure-flag"
-            ],
-            "operationType": "DELETE",
-            "subResource": "org.sourceid.servlet.filter.SimultaneousAuthnRequestCheckingFilter",
-            "resourceType": "/configStore"
+            ]
         },
         {
-            "itemIds": [
-                "AddApplicationUrl"
-            ],
+            "resourceType": "/configStore",
             "operationType": "DELETE",
             "subResource": "p1-admin-service-config",
-            "resourceType": "/configStore"
+            "itemIds": [
+                "AddApplicationUrl"
+            ]
         },
         {
-            "itemIds": [
-                "cookie-format"
-            ],
+            "resourceType": "/configStore",
             "operationType": "DELETE",
             "subResource": "persistent-session-cookie-config",
-            "resourceType": "/configStore"
+            "itemIds": [
+                "cookie-format"
+            ]
         },
         {
+            "resourceType": "/configStore",
             "operationType": "SAVE",
             "subResource": "response-header-admin-config",
             "items": [
                 {
+                    "id": "X-Frame-Options",
+                    "type": "MAP",
                     "mapValue": {
                         "include-patterns": "*",
                         "value": "DENY"
-                    },
-                    "id": "X-Frame-Options",
-                    "type": "MAP"
+                    }
                 }
-            ],
-            "resourceType": "/configStore"
+            ]
         },
         {
+            "resourceType": "/license/agreement",
             "operationType": "SAVE",
             "items": [
                 {
-                    "accepted": true,
-                    "licenseAgreementUrl": "https://${PF_ADMIN_PUBLIC_HOSTNAME}/pf-admin-api/license-agreement"
+                    "licenseAgreementUrl": "https://pf-admin.support-team-krusty-krab.dsp.lab/pf-admin-api/license-agreement",
+                    "accepted": true
                 }
-            ],
-            "resourceType": "/license/agreement"
+            ]
         },
         {
+            "resourceType": "/keyPairs/sslServer",
             "operationType": "SAVE",
             "items": [
                 {
-                    "password": "${keyPairs_sslServer_items_vtcm75en83g6v1r87ytm7lihi_vtcm75en83g6v1r87ytm7lihi_password}",
+                    "id": "vtcm75en83g6v1r87ytm7lihi",
                     "fileData": "${keyPairs_sslServer_items_vtcm75en83g6v1r87ytm7lihi_vtcm75en83g6v1r87ytm7lihi_fileData}",
-                    "id": "vtcm75en83g6v1r87ytm7lihi"
+                    "format": "PKCS12",
+                    "password": "${keyPairs_sslServer_items_vtcm75en83g6v1r87ytm7lihi_vtcm75en83g6v1r87ytm7lihi_password}"
                 }
-            ],
-            "resourceType": "/keyPairs/sslServer"
+            ]
         },
         {
+            "resourceType": "/keyPairs/sslServer/settings",
             "operationType": "SAVE",
             "items": [
                 {
+                    "runtimeServerCertRef": {
+                        "id": "vtcm75en83g6v1r87ytm7lihi"
+                    },
+                    "adminConsoleCertRef": {
+                        "id": "vtcm75en83g6v1r87ytm7lihi"
+                    },
                     "activeRuntimeServerCerts": [
                         {
-                            "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/sslServer/vtcm75en83g6v1r87ytm7lihi",
                             "id": "vtcm75en83g6v1r87ytm7lihi"
                         }
                     ],
                     "activeAdminConsoleCerts": [
                         {
-                            "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/sslServer/vtcm75en83g6v1r87ytm7lihi",
                             "id": "vtcm75en83g6v1r87ytm7lihi"
                         }
-                    ],
-                    "adminConsoleCertRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/sslServer/vtcm75en83g6v1r87ytm7lihi",
-                        "id": "vtcm75en83g6v1r87ytm7lihi"
-                    },
-                    "runtimeServerCertRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/sslServer/vtcm75en83g6v1r87ytm7lihi",
-                        "id": "vtcm75en83g6v1r87ytm7lihi"
-                    }
+                    ]
                 }
-            ],
-            "resourceType": "/keyPairs/sslServer/settings"
+            ]
         },
         {
+            "resourceType": "/keyPairs/oauthOpenIdConnect",
             "operationType": "SAVE",
             "items": [
                 {
-                    "staticJwksEnabled": false
+                    "staticJwksEnabled": false,
+                    "publishDynamicKeyX5cs": false,
+                    "dynamicKeyCertificateInformation": {
+                        "organization": null,
+                        "organizationUnit": null,
+                        "country": null,
+                        "state": null,
+                        "city": null
+                    }
                 }
-            ],
-            "resourceType": "/keyPairs/oauthOpenIdConnect"
+            ]
         },
         {
             "resourceType": "/dataStores",
@@ -301,23 +328,22 @@
                     "type": "JDBC",
                     "id": "ProvisionerDS",
                     "maskAttributeValues": false,
-                    "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir____SUBST_/__hypersonic__SUBST_/}ProvisionerDefaultDB;hsqldb.lock_file=false",
+                    "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                     "driverClass": "org.hsqldb.jdbcDriver",
                     "userName": "sa",
-                    "encryptedPassword": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..Qhhx3c_ZXGLns7AH2j4-Hg.TOSeRk9P3tJWg-OkLFDg6g.48EGglGzPrEk-l4Jre6yIA",
                     "allowMultiValueAttributes": false,
                     "name": "ProvisionerDS (sa)",
                     "connectionUrlTags": [
                         {
-                            "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir____SUBST_/__hypersonic__SUBST_/}ProvisionerDefaultDB;hsqldb.lock_file=false",
+                            "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                             "defaultSource": true
                         }
                     ],
-                    "lastModified": "2026-09-03T18:53:40.398Z",
                     "minPoolSize": 10,
                     "maxPoolSize": 100,
                     "blockingTimeout": 5000,
-                    "idleTimeout": 5
+                    "idleTimeout": 5,
+                    "password": "${dataStores_items_ProvisionerDS_ProvisionerDS_password}"
                 },
                 {
                     "type": "LDAP",
@@ -329,11 +355,10 @@
                     "ldapType": "ACTIVE_DIRECTORY",
                     "bindAnonymously": false,
                     "userDN": "CN=Administrator,CN=Users,DC=krusty-krab,DC=lab",
-                    "encryptedPassword": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMy4xLjIuMCJ9..-Styxkl-d02FYK6Oxp9AxQ.RI2iOSnTHzgYDj_JBc9kzA.SIlCNndFNPmqVdpFfJCb0Q",
                     "useSsl": false,
                     "useDnsSrvRecords": false,
                     "followLDAPReferrals": false,
-                    "name": "Krusty Krab Active Directory",
+                    "name": "Active Directory",
                     "hostnamesTags": [
                         {
                             "hostnames": [
@@ -342,7 +367,6 @@
                             "defaultSource": true
                         }
                     ],
-                    "lastModified": "2026-09-03T19:29:56.54Z",
                     "retryFailedOperations": false,
                     "testOnBorrow": true,
                     "testOnReturn": false,
@@ -358,548 +382,101 @@
                     "dnsTtl": 60000,
                     "ldapDnsSrvPrefix": "_ldap._tcp",
                     "ldapsDnsSrvPrefix": "_ldaps._tcp",
-                    "useStartTLS": false
+                    "useStartTLS": false,
+                    "password": "vUser1234!"
                 }
             ]
         },
         {
-            "resourceType": "/passwordCredentialValidators",
+            "resourceType": "/notificationPublishers/settings",
             "operationType": "SAVE",
             "items": [
-                {
-                    "id": "krustykrabpcv",
-                    "name": "Krusty Krab LDAP PCV",
-                    "pluginDescriptorRef": {
-                        "id": "org.sourceid.saml20.domain.LDAPUsernamePasswordCredentialValidator"
-                    },
-                    "configuration": {
-                        "fields": [
-                            {
-                                "name": "LDAP Datastore",
-                                "value": "krusty-krab-ad"
-                            },
-                            {
-                                "name": "Search Base",
-                                "value": "CN=Users,DC=krusty-krab,DC=lab"
-                            },
-                            {
-                                "name": "Search Filter",
-                                "value": "sAMAccountName=${username}"
-                            },
-                            {
-                                "name": "Scope of Search",
-                                "value": "Subtree"
-                            }
-                        ],
-                        "tables": [
-                            {
-                                "name": "Authentication Error Overrides",
-                                "rows": []
-                            }
-                        ]
-                    },
-                    "attributeContract": {
-                        "coreAttributes": [
-                            {
-                                "name": "username"
-                            },
-                            {
-                                "name": "DN"
-                            },
-                            {
-                                "name": "givenName"
-                            },
-                            {
-                                "name": "mail"
-                            }
-                        ],
-                        "extendedAttributes": [
-                            {
-                                "name": "sAMAccountName"
-                            },
-                            {
-                                "name": "clearance"
-                            },
-                            {
-                                "name": "nationality"
-                            },
-                            {
-                                "name": "needToKnow"
-                            }
-                        ]
-                    }
-                }
+                {}
             ]
-        },
-        {
-            "resourceType": "/idp/adapters",
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "id": "http",
-                    "name": "http",
-                    "pluginDescriptorRef": {
-                        "id": "com.pingidentity.adapters.httpbasic.idp.HttpBasicIdpAuthnAdapter"
-                    },
-                    "configuration": {
-                        "fields": [
-                            {
-                                "name": "Realm",
-                                "value": "dsp"
-                            },
-                            {
-                                "name": "Challenge Retries",
-                                "value": "3"
-                            }
-                        ],
-                        "tables": [
-                            {
-                                "name": "Credential Validators",
-                                "rows": [
-                                    {
-                                        "fields": [
-                                            {
-                                                "name": "Password Credential Validator Instance",
-                                                "value": "krustykrabpcv"
-                                            }
-                                        ],
-                                        "defaultRow": false
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "attributeContract": {
-                        "coreAttributes": [
-                            {
-                                "name": "username",
-                                "masked": false,
-                                "pseudonym": true
-                            }
-                        ],
-                        "extendedAttributes": [],
-                        "maskOgnlValues": false
-                    },
-                    "attributeMapping": {
-                        "attributeSources": [],
-                        "attributeContractFulfillment": {
-                            "username": {
-                                "source": {
-                                    "type": "ADAPTER"
-                                },
-                                "value": "username"
-                            }
-                        },
-                        "issuanceCriteria": {
-                            "conditionalCriteria": []
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {}
-            ],
-            "resourceType": "/notificationPublishers/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "federationInfo": {
-                        "saml2EntityId": "evaluation",
-                        "saml1xIssuerId": "",
-                        "wsfedRealm": "",
-                        "baseUrl": "https://pf.support-team-krusty-krab.dsp.lab",
-                        "saml1xSourceId": ""
-                    },
-                    "contactInfo": {},
-                    "rolesAndProtocols": {
-                        "oauthRole": {
-                            "enableOpenIdConnect": true,
-                            "enableOauth": true
-                        },
-                        "enableIdpDiscovery": true,
-                        "spRole": {
-                            "enableSaml11": true,
-                            "enableWsFed": true,
-                            "enable": true,
-                            "enableWsTrust": true,
-                            "saml20Profile": {
-                                "enableXASP": true,
-                                "enable": true
-                            },
-                            "enableInboundProvisioning": true,
-                            "enableOpenIDConnect": true,
-                            "enableSaml10": true
-                        },
-                        "idpRole": {
-                            "enableSaml11": true,
-                            "enableWsFed": true,
-                            "enable": true,
-                            "enableWsTrust": true,
-                            "saml20Profile": {
-                                "enable": true
-                            },
-                            "enableOutboundProvisioning": true,
-                            "enableSaml10": true
-                        }
-                    },
-                    "notifications": {
-                        "notifyAdminUserPasswordChanges": false
-                    }
-                }
-            ],
-            "resourceType": "/serverSettings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "current": {
-                        "keyData": "${serverSettings_systemKeys_items_current_keyData}",
-                        "creationDate": "2019-03-01T21:13:15.312Z"
-                    },
-                    "pending": {
-                        "keyData": "${serverSettings_systemKeys_items_pending_keyData}",
-                        "creationDate": "2019-03-01T21:13:15.314Z"
-                    }
-                }
-            ],
-            "resourceType": "/serverSettings/systemKeys"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "dataStoreRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/dataStores/ProvisionerDS",
-                        "id": "ProvisionerDS"
-                    },
-                    "synchronizationFrequency": 60
-                }
-            ],
-            "resourceType": "/serverSettings/outboundProvisioning"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "password": "${PING_IDENTITY_PASSWORD}",
-                    "roles": [
-                        "EXPRESSION_ADMINISTRATOR",
-                        "USER_ADMINISTRATOR",
-                        "ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR"
-                    ],
-                    "auditor": false,
-                    "description": "Initial administrator user.",
-                    "active": true,
-                    "username": "Administrator"
-                }
-            ],
-            "resourceType": "/administrativeAccounts"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "crlSettings": {
-                        "nextRetryMinsWhenNextUpdateInPast": 60,
-                        "verifyCrlSignature": true,
-                        "nextRetryMinsWhenResolveFailed": 1440,
-                        "treatNonRetrievableCrlAsRevoked": false
-                    }
-                }
-            ],
-            "resourceType": "/certificates/revocation/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "virtualHostNames": []
-                }
-            ],
-            "resourceType": "/virtualHostNames"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "redirectValidationLocalSettings": {
-                        "enableTargetResourceValidationForSLO": true,
-                        "enableInErrorResourceValidation": true,
-                        "whiteList": [],
-                        "enableTargetResourceValidationForSSO": true,
-                        "enableTargetResourceValidationForIdpDiscovery": true
-                    },
-                    "redirectValidationPartnerSettings": {
-                        "enableWreplyValidationSLO": true
-                    }
-                }
-            ],
-            "resourceType": "/redirectValidation"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "proxyTerminatesHttpsConns": false
-                }
-            ],
-            "resourceType": "/incomingProxySettings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "cacheDuration": 1440,
-                    "reloadDelay": 1440
-                }
-            ],
-            "resourceType": "/protocolMetadata/lifetimeSettings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {}
-            ],
-            "resourceType": "/protocolMetadata/signingSettings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {}
-            ],
-            "resourceType": "/serviceAuthentication"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {}
-            ],
-            "resourceType": "/oauth/accessTokenManagers/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "forceTcp": false,
-                    "debugLogOutput": false
-                }
-            ],
-            "resourceType": "/kerberos/realms/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "idpErrorMsg": "errorDetail.idpSsoFailure",
-                    "confirmIdpSlo": false
-                }
-            ],
-            "resourceType": "/idp/defaultUrls"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "confirmSlo": false
-                }
-            ],
-            "resourceType": "/sp/defaultUrls"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "trackAdapterSessionsForLogout": false,
-                    "sessionRevocationLifetime": 490,
-                    "revokeUserSessionOnLogout": true
-                }
-            ],
-            "resourceType": "/session/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "maxTimeoutMins": 480,
-                    "idleTimeoutMins": 60
-                }
-            ],
-            "resourceType": "/session/applicationSessionPolicy"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "persistentSessions": false,
-                    "maxTimeoutMins": 480,
-                    "maxTimeoutDisplayUnit": "MINUTES",
-                    "idleTimeoutMins": 60,
-                    "idleTimeoutDisplayUnit": "MINUTES",
-                    "enableSessions": false
-                }
-            ],
-            "resourceType": "/session/authenticationSessionPolicies/global"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "persistentGrantContract": {
-                        "coreAttributes": [
-                            {
-                                "name": "USER_KEY"
-                            },
-                            {
-                                "name": "USER_NAME"
-                            }
-                        ],
-                        "extendedAttributes": []
-                    },
-                    "scopeGroups": [],
-                    "atmIdForOAuthGrantManagement": "",
-                    "refreshRollingInterval": 0,
-                    "tokenEndpointBaseUrl": "https://pf.support-team-krusty-krab.dsp.lab",
-                    "trackUserSessionsForLogout": false,
-                    "defaultScopeDescription": "",
-                    "authorizationCodeEntropy": 30,
-                    "persistentGrantIdleTimeout": 30,
-                    "rollRefreshTokenValues": false,
-                    "allowedOrigins": [],
-                    "allowUnidentifiedClientExtensionGrants": false,
-                    "devicePollingInterval": 5,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "userAuthorizationUrl": "",
-                    "pendingAuthorizationTimeout": 600,
-                    "exclusiveScopeGroups": [],
-                    "userAuthorizationConsentPageSetting": "INTERNAL",
-                    "bypassActivationCodeConfirmation": false,
-                    "persistentGrantReuseGrantTypes": [
-                        "IMPLICIT"
-                    ],
-                    "registeredAuthorizationPath": "",
-                    "persistentGrantLifetime": -1,
-                    "refreshTokenLength": 42,
-                    "allowUnidentifiedClientROCreds": false,
-                    "authorizationCodeTimeout": 60,
-                    "persistentGrantLifetimeUnit": "DAYS",
-                    "scopes": [
-                        {
-                            "name": "openid",
-                            "description": "OpenID Connect",
-                            "dynamic": false
-                        },
-                        {
-                            "name": "profile",
-                            "description": "OpenID Connect profile",
-                            "dynamic": false
-                        },
-                        {
-                            "name": "email",
-                            "description": "OpenID Connect email",
-                            "dynamic": false
-                        }
-                    ],
-                    "scopeForOAuthGrantManagement": "",
-                    "exclusiveScopes": [],
-                    "bypassAuthorizationForApprovedGrants": false
-                }
-            ],
-            "resourceType": "/oauth/authServerSettings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {}
-            ],
-            "resourceType": "/oauth/cibaServerPolicy/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "sessionSettings": {
-                        "sessionRevocationLifetime": 490,
-                        "trackUserSessionsForLogout": false,
-                        "revokeUserSessionOnLogout": true
-                    }
-                }
-            ],
-            "resourceType": "/oauth/openIdConnect/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {}
-            ],
-            "resourceType": "/oauth/tokenExchange/processor/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {}
-            ],
-            "resourceType": "/oauth/tokenExchange/generator/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "clientMetadata": []
-                }
-            ],
-            "resourceType": "/oauth/clientSettings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "apiEnabled": false,
-                    "enableApiDescriptions": true
-                }
-            ],
-            "resourceType": "/authenticationApi/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "defaultAuthenticationSources": [
-                        {
-                            "type": "IDP_ADAPTER",
-                            "sourceRef": {
-                                "id": "http"
-                            }
-                        }
-                    ],
-                    "failIfNoSelection": false,
-                    "authnSelectionTrees": [],
-                    "trackedHttpParameters": []
-                }
-            ],
-            "resourceType": "/authenticationPolicies/default"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "enableSpAuthnSelection": false,
-                    "enableIdpAuthnSelection": false
-                }
-            ],
-            "resourceType": "/authenticationPolicies/settings"
         },
         {
             "resourceType": "/captchaProviders/settings",
             "operationType": "SAVE",
             "items": [
                 {}
+            ]
+        },
+        {
+            "resourceType": "/serverSettings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "contactInfo": {},
+                    "rolesAndProtocols": {
+                        "oauthRole": {
+                            "enableOauth": true,
+                            "enableOpenIdConnect": true
+                        },
+                        "idpRole": {
+                            "enable": true,
+                            "enableSaml11": true,
+                            "enableSaml10": true,
+                            "enableWsFed": true,
+                            "enableWsTrust": true,
+                            "saml20Profile": {
+                                "enable": true
+                            },
+                            "enableOutboundProvisioning": true
+                        },
+                        "spRole": {
+                            "enable": true,
+                            "enableSaml11": true,
+                            "enableSaml10": true,
+                            "enableWsFed": true,
+                            "enableWsTrust": true,
+                            "saml20Profile": {
+                                "enable": true,
+                                "enableXASP": true
+                            },
+                            "enableInboundProvisioning": true,
+                            "enableOpenIDConnect": true
+                        },
+                        "enableIdpDiscovery": true
+                    },
+                    "federationInfo": {
+                        "baseUrl": "https://pf.support-team-krusty-krab.dsp.lab",
+                        "saml2EntityId": "evaluation",
+                        "saml1xIssuerId": "",
+                        "saml1xSourceId": "",
+                        "wsfedRealm": ""
+                    },
+                    "notifications": {
+                        "notifyAdminUserPasswordChanges": false,
+                        "expiringCertificateAdministrativeConsoleWarningDays": 14,
+                        "expiredCertificateAdministrativeConsoleWarningDays": 14
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/serverSettings/systemKeys",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "current": {
+                        "keyData": "${serverSettings_systemKeys_items_current_keyData}"
+                    },
+                    "pending": {
+                        "keyData": "${serverSettings_systemKeys_items_pending_keyData}"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/serverSettings/outboundProvisioning",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "dataStoreRef": {
+                        "id": "ProvisionerDS"
+                    },
+                    "synchronizationFrequency": 60
+                }
             ]
         },
         {
@@ -997,9 +574,7 @@
                             "description": "Debug logging for user and group provisioning operations, including detailed information about provisioning requests, responses, and processing steps.",
                             "enabled": false
                         }
-                    ],
-                    "modificationDate": "2026-09-03T18:52:41.983Z",
-                    "replicationStatus": "REPLICATED"
+                    ]
                 }
             ]
         },
@@ -1012,50 +587,147 @@
                     "name": "AI Agent",
                     "description": "A client registered as an AI Agent",
                     "createdAt": "2025-01-01T00:00:00Z",
-                    "updatedAt": "2025-01-01T00:00:00Z"
+                    "updatedAt": "2026-09-09T09:33:50.283Z"
                 },
                 {
                     "id": "_pf_system_tag_cimd",
                     "name": "CIMD",
                     "description": "A client identified using a URL, no preregistration necessary",
                     "createdAt": "2025-01-01T00:00:00Z",
-                    "updatedAt": "2025-01-01T00:00:00Z"
+                    "updatedAt": "2026-09-09T09:33:50.287Z"
                 },
                 {
                     "id": "_pf_system_tag_customer",
                     "name": "Customer",
                     "description": "A CIAM application used by customers",
                     "createdAt": "2025-01-01T00:00:00Z",
-                    "updatedAt": "2025-01-01T00:00:00Z"
+                    "updatedAt": "2026-09-09T09:33:50.345Z"
                 },
                 {
                     "id": "_pf_system_tag_dcr",
                     "name": "DCR",
                     "description": "Dynamically registered clients",
                     "createdAt": "2025-01-01T00:00:00Z",
-                    "updatedAt": "2025-01-01T00:00:00Z"
+                    "updatedAt": "2026-09-09T09:33:50.35Z"
                 },
                 {
                     "id": "_pf_system_tag_mcp_server",
                     "name": "MCP Server",
                     "description": "A client registered as an MCP Server",
                     "createdAt": "2025-01-01T00:00:00Z",
-                    "updatedAt": "2025-01-01T00:00:00Z"
+                    "updatedAt": "2026-09-09T09:33:50.361Z"
                 },
                 {
                     "id": "_pf_system_tag_partner",
                     "name": "Partner",
                     "description": "An application used by partners",
                     "createdAt": "2025-01-01T00:00:00Z",
-                    "updatedAt": "2025-01-01T00:00:00Z"
+                    "updatedAt": "2026-09-09T09:33:50.364Z"
                 },
                 {
                     "id": "_pf_system_tag_workforce",
                     "name": "Workforce",
                     "description": "An application used by the workforce",
                     "createdAt": "2025-01-01T00:00:00Z",
-                    "updatedAt": "2025-01-01T00:00:00Z"
+                    "updatedAt": "2026-09-09T09:33:50.368Z"
                 }
+            ]
+        },
+        {
+            "resourceType": "/administrativeAccounts",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "username": "Administrator",
+                    "description": "Initial administrator user.",
+                    "auditor": false,
+                    "active": true,
+                    "roles": [
+                        "USER_ADMINISTRATOR",
+                        "DATA_COLLECTION_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
+                        "EXPRESSION_ADMINISTRATOR",
+                        "ADMINISTRATOR"
+                    ],
+                    "password": "${PING_IDENTITY_PASSWORD}"
+                }
+            ]
+        },
+        {
+            "resourceType": "/certificates/revocation/settings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "crlSettings": {
+                        "treatNonRetrievableCrlAsRevoked": false,
+                        "verifyCrlSignature": true,
+                        "nextRetryMinsWhenResolveFailed": 1440,
+                        "nextRetryMinsWhenNextUpdateInPast": 60
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/virtualHostNames",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "virtualHostNames": []
+                }
+            ]
+        },
+        {
+            "resourceType": "/redirectValidation",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "redirectValidationLocalSettings": {
+                        "enableTargetResourceValidationForSSO": true,
+                        "enableTargetResourceValidationForSLO": true,
+                        "enableTargetResourceValidationForIdpDiscovery": true,
+                        "enableInErrorResourceValidation": true,
+                        "whiteList": [],
+                        "uriAllowList": []
+                    },
+                    "redirectValidationPartnerSettings": {
+                        "enableWreplyValidationSLO": true
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/incomingProxySettings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "enableClientCertHeaderAuth": false,
+                    "clientCertHeaderEncodingFormat": "APACHE_MOD_SSL",
+                    "proxyTerminatesHttpsConns": false
+                }
+            ]
+        },
+        {
+            "resourceType": "/protocolMetadata/lifetimeSettings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "cacheDuration": 1440,
+                    "reloadDelay": 1440
+                }
+            ]
+        },
+        {
+            "resourceType": "/protocolMetadata/signingSettings",
+            "operationType": "SAVE",
+            "items": [
+                {}
+            ]
+        },
+        {
+            "resourceType": "/serviceAuthentication",
+            "operationType": "SAVE",
+            "items": [
+                {}
             ]
         },
         {
@@ -1080,36 +752,142 @@
             ]
         },
         {
-            "resourceType": "/protocolMetadata/attributeRequesterMappings",
+            "resourceType": "/authenticationPolicyContracts",
             "operationType": "SAVE",
             "items": [
                 {
-                    "issuerDNMapList": [],
-                    "subjectDNMapList": []
+                    "id": "oqrptLKkWywuw8vP",
+                    "name": "dsp",
+                    "coreAttributes": [
+                        {
+                            "name": "subject"
+                        }
+                    ],
+                    "extendedAttributes": [
+                        {
+                            "name": "email"
+                        },
+                        {
+                            "name": "username"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "resourceType": "/session/quotas",
+            "resourceType": "/passwordCredentialValidators",
             "operationType": "SAVE",
             "items": [
                 {
-                    "enableSessionQuotas": false
-                }
-            ]
-        },
-        {
-            "resourceType": "/oauth/cimd/settings",
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "cimdEnabled": false,
-                    "cacheLifetimeMinSec": 300,
-                    "cacheLifetimeMaxSec": 3600,
-                    "maxRetry": 3,
-                    "requestTimeoutSec": 5,
-                    "maxFileSizeBytes": 5120,
-                    "readTimeoutSec": 5
+                    "id": "krustykrabpcv",
+                    "name": "LDAP PCV",
+                    "pluginDescriptorRef": {
+                        "id": "org.sourceid.saml20.domain.LDAPUsernamePasswordCredentialValidator"
+                    },
+                    "configuration": {
+                        "tables": [
+                            {
+                                "name": "Authentication Error Overrides",
+                                "rows": []
+                            }
+                        ],
+                        "fields": [
+                            {
+                                "name": "LDAP Datastore",
+                                "value": "krusty-krab-ad"
+                            },
+                            {
+                                "name": "Search Base",
+                                "value": "CN=Users,DC=krusty-krab,DC=lab"
+                            },
+                            {
+                                "name": "Search Filter",
+                                "value": "sAMAccountName=${username}"
+                            },
+                            {
+                                "name": "Scope of Search",
+                                "value": "Subtree"
+                            },
+                            {
+                                "name": "Case-Sensitive Matching",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Display Name Attribute",
+                                "value": "displayName"
+                            },
+                            {
+                                "name": "Mail Attribute",
+                                "value": "mail"
+                            },
+                            {
+                                "name": "SMS Attribute",
+                                "value": ""
+                            },
+                            {
+                                "name": "PingID Username Attribute",
+                                "value": ""
+                            },
+                            {
+                                "name": "Mail Search Filter",
+                                "value": ""
+                            },
+                            {
+                                "name": "Username Attribute",
+                                "value": ""
+                            },
+                            {
+                                "name": "Trim Username Spaces For Search",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Mail Verified Attribute",
+                                "value": ""
+                            },
+                            {
+                                "name": "Account Disabled Attribute",
+                                "value": ""
+                            },
+                            {
+                                "name": "Enable PingDirectory Detailed Password Policy Requirement Messaging",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Expect Password Expired Control",
+                                "value": "false"
+                            }
+                        ]
+                    },
+                    "attributeContract": {
+                        "coreAttributes": [
+                            {
+                                "name": "mail"
+                            },
+                            {
+                                "name": "givenName"
+                            },
+                            {
+                                "name": "DN"
+                            },
+                            {
+                                "name": "username"
+                            }
+                        ],
+                        "extendedAttributes": [
+                            {
+                                "name": "nationality"
+                            },
+                            {
+                                "name": "sAMAccountName"
+                            },
+                            {
+                                "name": "needToKnow"
+                            },
+                            {
+                                "name": "clearance"
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -1121,8 +899,7 @@
                     "id": "dspjwtatm",
                     "name": "DSP JWT Access Token Manager",
                     "pluginDescriptorRef": {
-                        "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
-                        "location": "https://pf-admin.support-team-krusty-krab.dsp.lab/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
+                        "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
                     },
                     "configuration": {
                         "tables": [
@@ -1147,10 +924,6 @@
                             {
                                 "name": "JWS Algorithm",
                                 "value": "RS256"
-                            },
-                            {
-                                "name": "Enable Token Revocation",
-                                "value": "false"
                             },
                             {
                                 "name": "Active Symmetric Key ID",
@@ -1181,8 +954,16 @@
                                 "value": ""
                             },
                             {
+                                "name": "Enable Token Revocation",
+                                "value": "false"
+                            },
+                            {
                                 "name": "Include Key ID Header Parameter",
                                 "value": "true"
+                            },
+                            {
+                                "name": "Include X.509 Thumbprint Header Parameter",
+                                "value": "false"
                             },
                             {
                                 "name": "Default JWKS URL Cache Duration",
@@ -1190,7 +971,11 @@
                             },
                             {
                                 "name": "Include JWE Key ID Header Parameter",
-                                "value": "true"
+                                "value": "false"
+                            },
+                            {
+                                "name": "Include JWE X.509 Thumbprint Header Parameter",
+                                "value": "false"
                             },
                             {
                                 "name": "Client ID Claim Name",
@@ -1217,6 +1002,10 @@
                                 "value": "https://platform.support-team-krusty-krab.dsp.lab"
                             },
                             {
+                                "name": "Not Before Claim Offset",
+                                "value": ""
+                            },
+                            {
                                 "name": "Include Issued At Claim",
                                 "value": "true"
                             },
@@ -1225,36 +1014,20 @@
                                 "value": "22"
                             },
                             {
-                                "name": "Publish Keys to the PingFederate JWKS Endpoint",
-                                "value": "false"
-                            },
-                            {
-                                "name": "JWKS Endpoint Cache Duration",
-                                "value": "720"
-                            },
-                            {
-                                "name": "Expand Scope Groups",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Include X.509 Thumbprint Header Parameter",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Include JWE X.509 Thumbprint Header Parameter",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Not Before Claim Offset",
-                                "value": ""
-                            },
-                            {
                                 "name": "Access Grant GUID Claim Name",
                                 "value": ""
                             },
                             {
+                                "name": "Publish Keys to the PingFederate JWKS Endpoint",
+                                "value": "false"
+                            },
+                            {
                                 "name": "JWKS Endpoint Path",
                                 "value": ""
+                            },
+                            {
+                                "name": "JWKS Endpoint Cache Duration",
+                                "value": "720"
                             },
                             {
                                 "name": "Publish Key ID X.509 URL",
@@ -1265,29 +1038,40 @@
                                 "value": "false"
                             },
                             {
+                                "name": "Expand Scope Groups",
+                                "value": "false"
+                            },
+                            {
                                 "name": "Type Header Value",
                                 "value": ""
                             }
                         ]
                     },
-                    "lastModified": "2026-09-03T19:29:56.613Z",
                     "attributeContract": {
                         "coreAttributes": [],
                         "extendedAttributes": [
                             {
-                                "name": "attributes.needToKnow",
+                                "name": "sub",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "groups",
                                 "multiValued": true
                             },
                             {
-                                "name": "attributes.nationality",
-                                "multiValued": true
+                                "name": "given_name",
+                                "multiValued": false
                             },
                             {
-                                "name": "attributes.clearance",
-                                "multiValued": true
+                                "name": "family_name",
+                                "multiValued": false
                             },
                             {
                                 "name": "email",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "username",
                                 "multiValued": false
                             }
                         ]
@@ -1310,9 +1094,766 @@
                         "checkSessionRevocationStatus": false,
                         "updateAuthnSessionActivity": false,
                         "includeSessionId": false
-                    },
-                    "sequenceNumber": 254771
+                    }
                 }
+            ]
+        },
+        {
+            "resourceType": "/oauth/accessTokenManagers/settings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/oauth/authServerSettings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "defaultScopeDescription": "",
+                    "scopes": [
+                        {
+                            "name": "openid",
+                            "description": "OpenID Connect",
+                            "dynamic": false
+                        },
+                        {
+                            "name": "profile",
+                            "description": "OpenID Connect profile",
+                            "dynamic": false
+                        },
+                        {
+                            "name": "email",
+                            "description": "OpenID Connect email",
+                            "dynamic": false
+                        }
+                    ],
+                    "scopeGroups": [],
+                    "exclusiveScopes": [],
+                    "exclusiveScopeGroups": [],
+                    "authorizationCodeTimeout": 60,
+                    "authorizationCodeEntropy": 30,
+                    "disallowPlainPKCE": false,
+                    "includeIssuerInAuthorizationResponse": false,
+                    "persistentGrantLifetime": -1,
+                    "persistentGrantLifetimeUnit": "DAYS",
+                    "persistentGrantIdleTimeout": 30,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "refreshTokenLength": 42,
+                    "rollRefreshTokenValues": false,
+                    "refreshTokenRollingGracePeriod": 60,
+                    "refreshRollingInterval": 0,
+                    "refreshRollingIntervalTimeUnit": "HOURS",
+                    "persistentGrantReuseGrantTypes": [
+                        "IMPLICIT"
+                    ],
+                    "persistentGrantContract": {
+                        "extendedAttributes": [],
+                        "coreAttributes": [
+                            {
+                                "name": "USER_KEY"
+                            },
+                            {
+                                "name": "USER_NAME"
+                            }
+                        ]
+                    },
+                    "bypassAuthorizationForApprovedGrants": false,
+                    "allowUnidentifiedClientROCreds": false,
+                    "allowUnidentifiedClientExtensionGrants": false,
+                    "tokenEndpointBaseUrl": "https://pf.support-team-krusty-krab.dsp.lab",
+                    "requireOfflineAccessScopeToIssueRefreshTokens": false,
+                    "offlineAccessRequireConsentPrompt": false,
+                    "userAuthorizationUrl": "",
+                    "registeredAuthorizationPath": "",
+                    "pendingAuthorizationTimeout": 600,
+                    "bypassActivationCodeConfirmation": false,
+                    "devicePollingInterval": 5,
+                    "activationCodeCheckMode": "AFTER_AUTHENTICATION",
+                    "enableCookielessUserAuthorizationAuthenticationApi": false,
+                    "returnIdTokenOnOpenIdWithDeviceAuthzGrant": false,
+                    "userAuthorizationConsentPageSetting": "INTERNAL",
+                    "atmIdForOAuthGrantManagement": "",
+                    "scopeForOAuthGrantManagement": "",
+                    "allowedOrigins": [],
+                    "trackUserSessionsForLogout": false,
+                    "parReferenceTimeout": 60,
+                    "parReferenceLength": 24,
+                    "parStatus": "ENABLED",
+                    "clientSecretRetentionPeriod": 0,
+                    "jwtSecuredAuthorizationResponseModeLifetime": 600,
+                    "dpopProofRequireNonce": false,
+                    "dpopProofLifetimeSeconds": 120,
+                    "dpopProofEnforceReplayPrevention": false,
+                    "bypassAuthorizationForApprovedConsents": false,
+                    "consentLifetimeDays": -1
+                }
+            ]
+        },
+        {
+            "resourceType": "/kerberos/realms/settings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "forceTcp": false,
+                    "debugLogOutput": false,
+                    "keySetRetentionPeriodMins": 610
+                }
+            ]
+        },
+        {
+            "resourceType": "/idp/adapters",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "id": "htmlform",
+                    "name": "htmlform",
+                    "pluginDescriptorRef": {
+                        "id": "com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter"
+                    },
+                    "configuration": {
+                        "tables": [
+                            {
+                                "name": "Credential Validators",
+                                "rows": [
+                                    {
+                                        "fields": [
+                                            {
+                                                "name": "Password Credential Validator Instance",
+                                                "value": "krustykrabpcv"
+                                            }
+                                        ],
+                                        "defaultRow": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "fields": [
+                            {
+                                "name": "Challenge Retries",
+                                "value": "5"
+                            },
+                            {
+                                "name": "Session State",
+                                "value": "Globally"
+                            },
+                            {
+                                "name": "Session Timeout",
+                                "value": "60"
+                            },
+                            {
+                                "name": "Session Max Timeout",
+                                "value": "480"
+                            },
+                            {
+                                "name": "Allow Password Changes",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Password Management System",
+                                "value": ""
+                            },
+                            {
+                                "name": "Enable 'Remember My Username'",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Enable 'This is My Device'",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Change Password Policy Contract",
+                                "value": ""
+                            },
+                            {
+                                "name": "Change Password Email Notification",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Show Password Expiring Warning",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Password Reset Type",
+                                "value": "NONE"
+                            },
+                            {
+                                "name": "Password Reset Policy Contract",
+                                "value": ""
+                            },
+                            {
+                                "name": "Revoke Sessions After Password Change Or Reset",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Account Unlock",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Local Identity Profile",
+                                "value": ""
+                            },
+                            {
+                                "name": "Notification Publisher",
+                                "value": ""
+                            },
+                            {
+                                "name": "Enable Username Recovery",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Login Template",
+                                "value": "html.form.login.template.html"
+                            },
+                            {
+                                "name": "Logout Path",
+                                "value": ""
+                            },
+                            {
+                                "name": "Logout Redirect",
+                                "value": ""
+                            },
+                            {
+                                "name": "Logout Template",
+                                "value": "idp.logout.success.page.template.html"
+                            },
+                            {
+                                "name": "Change Password Template",
+                                "value": "html.form.change.password.template.html"
+                            },
+                            {
+                                "name": "Change Password Message Template",
+                                "value": "html.form.message.template.html"
+                            },
+                            {
+                                "name": "Password Management System Message Template",
+                                "value": "html.form.message.template.html"
+                            },
+                            {
+                                "name": "Password Update Timeout",
+                                "value": "30"
+                            },
+                            {
+                                "name": "Change Password Email Template",
+                                "value": "message-template-end-user-password-change.html"
+                            },
+                            {
+                                "name": "Expiring Password Warning Template",
+                                "value": "html.form.password.expiring.notification.template.html"
+                            },
+                            {
+                                "name": "Threshold for Expiring Password Warning",
+                                "value": "7"
+                            },
+                            {
+                                "name": "Snooze Interval for Expiring Password Warning",
+                                "value": "24"
+                            },
+                            {
+                                "name": "Require Re-Authentication For Expiring Password Flow",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Require Re-Authentication for Change Password Flow",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Require Re-Authentication for Password Reset Flow",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Login Challenge Template",
+                                "value": "html.form.login.challenge.template.html"
+                            },
+                            {
+                                "name": "'Remember My Username' Lifetime",
+                                "value": "30"
+                            },
+                            {
+                                "name": "'This is My Device' Lifetime",
+                                "value": "30"
+                            },
+                            {
+                                "name": "Allow Username Edits During Chaining",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Track Authentication Time",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Post-Password Change Re-Authentication Delay",
+                                "value": "0"
+                            },
+                            {
+                                "name": "Password Reset One-Time Link Email Template",
+                                "value": "message-template-forgot-password-link.html"
+                            },
+                            {
+                                "name": "Password Reset One-Time Password Email Template",
+                                "value": "message-template-forgot-password-code.html"
+                            },
+                            {
+                                "name": "Account Disabled Email Template",
+                                "value": "message-template-account-disabled.html"
+                            },
+                            {
+                                "name": "Password Reset Complete Email Template",
+                                "value": "message-template-forgot-password-complete.html"
+                            },
+                            {
+                                "name": "Password Reset Failed Email Template",
+                                "value": "message-template-forgot-password-failed.html"
+                            },
+                            {
+                                "name": "Password Reset Username Template",
+                                "value": "forgot-password.html"
+                            },
+                            {
+                                "name": "Password Reset Code Template",
+                                "value": "forgot-password-resume.html"
+                            },
+                            {
+                                "name": "Password Reset Template",
+                                "value": "forgot-password-change.html"
+                            },
+                            {
+                                "name": "Password Reset Error Template",
+                                "value": "forgot-password-error.html"
+                            },
+                            {
+                                "name": "Password Reset Success Template",
+                                "value": "forgot-password-success.html"
+                            },
+                            {
+                                "name": "Account Unlock Template",
+                                "value": "account-unlock.html"
+                            },
+                            {
+                                "name": "Account Unlock Email Template",
+                                "value": "message-template-account-unlock-complete.html"
+                            },
+                            {
+                                "name": "OTP Length",
+                                "value": "8"
+                            },
+                            {
+                                "name": "Allowed OTP Character Set",
+                                "value": "23456789BCDFGHJKMNPQRSTVWXZbcdfghjkmnpqrstvwxz"
+                            },
+                            {
+                                "name": "OTP Time to Live",
+                                "value": "10"
+                            },
+                            {
+                                "name": "PingID Properties",
+                                "value": ""
+                            },
+                            {
+                                "name": "Require Verified Email",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Username Recovery Template",
+                                "value": "username.recovery.template.html"
+                            },
+                            {
+                                "name": "Username Recovery Info Template",
+                                "value": "username.recovery.info.template.html"
+                            },
+                            {
+                                "name": "Username Recovery Email Template",
+                                "value": "message-template-username-recovery.html"
+                            },
+                            {
+                                "name": "Client Side Authenticator",
+                                "value": ""
+                            },
+                            {
+                                "name": "CAPTCHA Provider",
+                                "value": ""
+                            },
+                            {
+                                "name": "CAPTCHA for Authentication",
+                                "value": "false"
+                            },
+                            {
+                                "name": "CAPTCHA for Password change",
+                                "value": "false"
+                            },
+                            {
+                                "name": "CAPTCHA for Password Reset",
+                                "value": "false"
+                            },
+                            {
+                                "name": "CAPTCHA for Username recovery",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Fail Authentication on Account Lockout",
+                                "value": "false"
+                            }
+                        ]
+                    },
+                    "attributeContract": {
+                        "coreAttributes": [
+                            {
+                                "name": "policy.action",
+                                "masked": false,
+                                "pseudonym": false
+                            },
+                            {
+                                "name": "username",
+                                "masked": false,
+                                "pseudonym": true
+                            }
+                        ],
+                        "extendedAttributes": [
+                            {
+                                "name": "email",
+                                "masked": false,
+                                "pseudonym": false
+                            }
+                        ],
+                        "maskOgnlValues": false
+                    },
+                    "attributeMapping": {
+                        "attributeSources": [
+                            {
+                                "type": "LDAP",
+                                "dataStoreRef": {
+                                    "id": "krusty-krab-ad"
+                                },
+                                "id": "ad",
+                                "description": "ad",
+                                "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
+                                "searchScope": "SUBTREE",
+                                "searchFilter": "cn=${username}",
+                                "searchAttributes": [
+                                    "mail",
+                                    "sAMAccountName",
+                                    "Subject DN"
+                                ],
+                                "binaryAttributeSettings": {},
+                                "memberOfNestedGroup": false
+                            }
+                        ],
+                        "attributeContractFulfillment": {
+                            "policy.action": {
+                                "source": {
+                                    "type": "ADAPTER"
+                                },
+                                "value": "policy.action"
+                            },
+                            "email": {
+                                "source": {
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
+                                },
+                                "value": "mail"
+                            },
+                            "username": {
+                                "source": {
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
+                                },
+                                "value": "sAMAccountName"
+                            }
+                        },
+                        "issuanceCriteria": {
+                            "conditionalCriteria": []
+                        }
+                    }
+                },
+                {
+                    "id": "http",
+                    "name": "http",
+                    "pluginDescriptorRef": {
+                        "id": "com.pingidentity.adapters.httpbasic.idp.HttpBasicIdpAuthnAdapter"
+                    },
+                    "configuration": {
+                        "tables": [
+                            {
+                                "name": "Credential Validators",
+                                "rows": [
+                                    {
+                                        "fields": [
+                                            {
+                                                "name": "Password Credential Validator Instance",
+                                                "value": "krustykrabpcv"
+                                            }
+                                        ],
+                                        "defaultRow": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "fields": [
+                            {
+                                "name": "Realm",
+                                "value": "dsp"
+                            },
+                            {
+                                "name": "Challenge Retries",
+                                "value": "3"
+                            }
+                        ]
+                    },
+                    "attributeContract": {
+                        "coreAttributes": [
+                            {
+                                "name": "username",
+                                "masked": false,
+                                "pseudonym": true
+                            }
+                        ],
+                        "extendedAttributes": [],
+                        "maskOgnlValues": false
+                    },
+                    "attributeMapping": {
+                        "attributeSources": [],
+                        "attributeContractFulfillment": {
+                            "username": {
+                                "source": {
+                                    "type": "ADAPTER"
+                                },
+                                "value": "username"
+                            }
+                        },
+                        "issuanceCriteria": {
+                            "conditionalCriteria": []
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/idp/defaultUrls",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "confirmIdpSlo": false,
+                    "idpErrorMsg": "errorDetail.idpSsoFailure"
+                }
+            ]
+        },
+        {
+            "resourceType": "/sp/defaultUrls",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "confirmSlo": false
+                }
+            ]
+        },
+        {
+            "resourceType": "/oauth/tokenExchange/processor/settings",
+            "operationType": "SAVE",
+            "items": [
+                {}
+            ]
+        },
+        {
+            "resourceType": "/protocolMetadata/attributeRequesterMappings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "issuerDNMapList": [],
+                    "subjectDNMapList": []
+                }
+            ]
+        },
+        {
+            "resourceType": "/session/settings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "trackAdapterSessionsForLogout": false,
+                    "revokeUserSessionOnLogout": true,
+                    "sessionRevocationLifetime": 490
+                }
+            ]
+        },
+        {
+            "resourceType": "/session/applicationSessionPolicy",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "idleTimeoutMins": 60,
+                    "maxTimeoutMins": 480
+                }
+            ]
+        },
+        {
+            "resourceType": "/session/authenticationSessionPolicies/global",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "enableSessions": false,
+                    "persistentSessions": false,
+                    "hashUniqueUserKeyAttribute": false,
+                    "idleTimeoutMins": 60,
+                    "idleTimeoutDisplayUnit": "MINUTES",
+                    "maxTimeoutMins": 480,
+                    "maxTimeoutDisplayUnit": "MINUTES"
+                }
+            ]
+        },
+        {
+            "resourceType": "/session/quotas",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "enableSessionQuotas": false
+                }
+            ]
+        },
+        {
+            "resourceType": "/oauth/authenticationPolicyContractMappings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "attributeSources": [
+                        {
+                            "type": "LDAP",
+                            "dataStoreRef": {
+                                "id": "krusty-krab-ad"
+                            },
+                            "id": "ad",
+                            "description": "ad",
+                            "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
+                            "searchScope": "SUBTREE",
+                            "searchFilter": "uid=${username}",
+                            "searchAttributes": [
+                                "givenName",
+                                "mail",
+                                "sn",
+                                "Subject DN"
+                            ],
+                            "binaryAttributeSettings": {},
+                            "memberOfNestedGroup": false
+                        }
+                    ],
+                    "attributeContractFulfillment": {
+                        "USER_NAME": {
+                            "source": {
+                                "type": "LDAP_DATA_STORE",
+                                "id": "ad"
+                            },
+                            "value": "mail"
+                        },
+                        "USER_KEY": {
+                            "source": {
+                                "type": "LDAP_DATA_STORE",
+                                "id": "ad"
+                            },
+                            "value": "mail"
+                        }
+                    },
+                    "issuanceCriteria": {
+                        "conditionalCriteria": []
+                    },
+                    "id": "oqrptLKkWywuw8vP",
+                    "authenticationPolicyContractRef": {
+                        "id": "oqrptLKkWywuw8vP"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/oauth/cibaServerPolicy/settings",
+            "operationType": "SAVE",
+            "items": [
+                {}
+            ]
+        },
+        {
+            "resourceType": "/oauth/cimd/settings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "cimdEnabled": false,
+                    "cacheLifetimeMinSec": 300,
+                    "cacheLifetimeMaxSec": 3600,
+                    "maxRetry": 3,
+                    "requestTimeoutSec": 5,
+                    "maxFileSizeBytes": 5120,
+                    "readTimeoutSec": 5
+                }
+            ]
+        },
+        {
+            "resourceType": "/oauth/openIdConnect/policies",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "id": "dsp",
+                    "name": "dsp",
+                    "idTokenLifetime": 5,
+                    "attributeContract": {
+                        "coreAttributes": [
+                            {
+                                "name": "sub",
+                                "multiValued": false
+                            }
+                        ],
+                        "extendedAttributes": []
+                    },
+                    "attributeMapping": {
+                        "attributeSources": [],
+                        "attributeContractFulfillment": {
+                            "sub": {
+                                "source": {
+                                    "type": "OAUTH_PERSISTENT_GRANT"
+                                },
+                                "value": "USER_KEY"
+                            }
+                        },
+                        "issuanceCriteria": {
+                            "conditionalCriteria": []
+                        }
+                    },
+                    "includeSriInIdToken": false,
+                    "includeUserInfoInIdToken": true,
+                    "includeSHashInIdToken": false,
+                    "includeX5tInIdToken": false,
+                    "idTokenTypHeaderValue": "",
+                    "returnIdTokenOnRefreshGrant": false,
+                    "returnIdTokenOnTokenExchangeGrant": false,
+                    "reissueIdTokenInHybridFlow": false,
+                    "allowIdTokenIntrospection": false,
+                    "accessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "scopeAttributeMappings": {}
+                }
+            ]
+        },
+        {
+            "resourceType": "/oauth/openIdConnect/settings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "defaultPolicyRef": {
+                        "id": "dsp"
+                    },
+                    "sessionSettings": {
+                        "trackUserSessionsForLogout": false,
+                        "revokeUserSessionOnLogout": true,
+                        "sessionRevocationLifetime": 490
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/oauth/tokenExchange/generator/settings",
+            "operationType": "SAVE",
+            "items": [
+                {}
             ]
         },
         {
@@ -1320,287 +1861,926 @@
             "operationType": "SAVE",
             "items": [
                 {
+                    "clientId": "cli-client",
+                    "enabled": true,
+                    "redirectUris": [
+                        "http://localhost:*/callback"
+                    ],
+                    "grantTypes": [
+                        "AUTHORIZATION_CODE"
+                    ],
+                    "name": "CLI Client",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "NONE",
+                        "secondarySecrets": []
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
                     "clientId": "dsp",
+                    "enabled": true,
+                    "redirectUris": [],
+                    "grantTypes": [
+                        "CLIENT_CREDENTIALS"
+                    ],
                     "name": "DSP Platform",
-                    "enabled": true,
-                    "grantTypes": [
-                        "CLIENT_CREDENTIALS"
-                    ],
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
                     "clientAuth": {
                         "type": "SECRET",
+                        "secondarySecrets": [],
                         "secret": "secret"
                     },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
                     },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": []
-                },
-                {
-                    "clientId": "dsp-sdk",
-                    "name": "DSP SDK",
-                    "enabled": true,
-                    "grantTypes": [
-                        "CLIENT_CREDENTIALS"
-                    ],
-                    "clientAuth": {
-                        "type": "SECRET",
-                        "secret": "secret"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": []
-                },
-                {
-                    "clientId": "tagging-pdp",
-                    "name": "Tagging PDP",
-                    "enabled": true,
-                    "grantTypes": [
-                        "CLIENT_CREDENTIALS"
-                    ],
-                    "clientAuth": {
-                        "type": "SECRET",
-                        "secret": "secret"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": []
-                },
-                {
-                    "clientId": "dsp-shared",
-                    "name": "DSP Shared",
-                    "enabled": true,
-                    "grantTypes": [
-                        "CLIENT_CREDENTIALS"
-                    ],
-                    "clientAuth": {
-                        "type": "SECRET",
-                        "secret": "secret"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": []
-                },
-                {
-                    "clientId": "dsp-outlook",
-                    "name": "DSP Outlook",
-                    "enabled": true,
-                    "grantTypes": [
-                        "CLIENT_CREDENTIALS"
-                    ],
-                    "clientAuth": {
-                        "type": "SECRET",
-                        "secret": "secret"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": []
-                },
-                {
-                    "clientId": "dsp-sharepoint-rer",
-                    "name": "DSP SharePoint RER",
-                    "enabled": true,
-                    "grantTypes": [
-                        "CLIENT_CREDENTIALS"
-                    ],
-                    "clientAuth": {
-                        "type": "SECRET",
-                        "secret": "secret"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": []
-                },
-                {
-                    "clientId": "dsp-tdf-reader",
-                    "name": "DSP TDF Reader",
-                    "enabled": true,
-                    "grantTypes": [
-                        "CLIENT_CREDENTIALS",
-                        "RESOURCE_OWNER_CREDENTIALS"
-                    ],
-                    "clientAuth": {
-                        "type": "SECRET",
-                        "secret": "secret"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": [
-                        "https://platform.support-team-krusty-krab.dsp.lab/*"
-                    ]
-                },
-                {
-                    "clientId": "dsp-sharepoint-module",
-                    "name": "DSP SharePoint Module",
-                    "enabled": true,
-                    "grantTypes": [
-                        "AUTHORIZATION_CODE"
-                    ],
-                    "clientAuth": {
-                        "type": "SECRET",
-                        "secret": "secret"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": [
-                        "https://sharepoint1.krusty-krab.lab/*"
-                    ]
-                },
-                {
-                    "clientId": "dsp-tdf-reader-web",
-                    "name": "DSP TDF Reader Web",
-                    "enabled": true,
-                    "grantTypes": [
-                        "AUTHORIZATION_CODE"
-                    ],
-                    "clientAuth": {
-                        "type": "NONE"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": [
-                        "https://platform.support-team-krusty-krab.dsp.lab/*"
-                    ]
-                },
-                {
-                    "clientId": "dsp-secure-viewer-web",
-                    "name": "DSP Secure Viewer Web",
-                    "enabled": true,
-                    "grantTypes": [
-                        "AUTHORIZATION_CODE"
-                    ],
-                    "clientAuth": {
-                        "type": "NONE"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": [
-                        "https://platform.support-team-krusty-krab.dsp.lab/*"
-                    ]
-                },
-                {
-                    "clientId": "dsp-web-admin",
-                    "name": "DSP Web Admin",
-                    "enabled": true,
-                    "grantTypes": [
-                        "AUTHORIZATION_CODE"
-                    ],
-                    "clientAuth": {
-                        "type": "NONE"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": [
-                        "https://platform.support-team-krusty-krab.dsp.lab/*"
-                    ]
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
                 },
                 {
                     "clientId": "dsp-desktop",
-                    "name": "DSP Desktop",
                     "enabled": true,
-                    "grantTypes": [
-                        "AUTHORIZATION_CODE"
-                    ],
-                    "clientAuth": {
-                        "type": "NONE"
-                    },
-                    "defaultAccessTokenManagerRef": {
-                        "id": "dspjwtatm"
-                    },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
                     "redirectUris": [
                         "http://127.0.0.1:*"
-                    ]
-                },
-                {
-                    "clientId": "dsp-public",
-                    "name": "DSP Public",
-                    "enabled": true,
+                    ],
                     "grantTypes": [
                         "AUTHORIZATION_CODE"
                     ],
-                    "clientAuth": {
-                        "type": "NONE"
-                    },
+                    "name": "DSP Desktop",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
                     "defaultAccessTokenManagerRef": {
                         "id": "dspjwtatm"
                     },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": [
-                        "http://localhost:9000/*"
-                    ]
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "NONE",
+                        "secondarySecrets": []
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
                 },
                 {
-                    "clientId": "cli-client",
-                    "name": "CLI Client",
+                    "clientId": "dsp-outlook",
                     "enabled": true,
+                    "redirectUris": [],
                     "grantTypes": [
-                        "AUTHORIZATION_CODE"
+                        "CLIENT_CREDENTIALS"
                     ],
-                    "clientAuth": {
-                        "type": "NONE"
-                    },
+                    "name": "DSP Outlook",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
                     "defaultAccessTokenManagerRef": {
                         "id": "dspjwtatm"
                     },
-                    "bypassApprovalPage": true,
-                    "restrictScopes": false,
-                    "redirectUris": [
-                        "http://localhost:*"
-                    ]
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "SECRET",
+                        "secondarySecrets": [],
+                        "secret": "secret"
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
                 },
                 {
                     "clientId": "dsp-outlook-auth",
-                    "name": "DSP Outlook Auth",
                     "enabled": true,
+                    "redirectUris": [
+                        "https://platform.support-team-krusty-krab.dsp.lab/*"
+                    ],
                     "grantTypes": [
                         "AUTHORIZATION_CODE",
                         "RESOURCE_OWNER_CREDENTIALS"
                     ],
-                    "clientAuth": {
-                        "type": "NONE"
-                    },
+                    "name": "DSP Outlook Auth",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
                     "defaultAccessTokenManagerRef": {
                         "id": "dspjwtatm"
                     },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "NONE",
+                        "secondarySecrets": []
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
+                    "clientId": "dsp-public",
+                    "enabled": true,
+                    "redirectUris": [
+                        "http://localhost:9000/*"
+                    ],
+                    "grantTypes": [
+                        "AUTHORIZATION_CODE"
+                    ],
+                    "name": "DSP Public",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
                     "bypassApprovalPage": true,
                     "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "NONE",
+                        "secondarySecrets": []
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
+                    "clientId": "dsp-sdk",
+                    "enabled": true,
+                    "redirectUris": [],
+                    "grantTypes": [
+                        "CLIENT_CREDENTIALS"
+                    ],
+                    "name": "DSP SDK",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "SECRET",
+                        "secondarySecrets": [],
+                        "secret": "secret"
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
+                    "clientId": "dsp-secure-viewer-web",
+                    "enabled": true,
                     "redirectUris": [
                         "https://platform.support-team-krusty-krab.dsp.lab/*"
-                    ]
+                    ],
+                    "grantTypes": [
+                        "AUTHORIZATION_CODE"
+                    ],
+                    "name": "DSP Secure Viewer Web",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "NONE",
+                        "secondarySecrets": []
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
+                    "clientId": "dsp-shared",
+                    "enabled": true,
+                    "redirectUris": [],
+                    "grantTypes": [
+                        "CLIENT_CREDENTIALS"
+                    ],
+                    "name": "DSP Shared",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "SECRET",
+                        "secondarySecrets": [],
+                        "secret": "secret"
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
+                    "clientId": "dsp-sharepoint-module",
+                    "enabled": true,
+                    "redirectUris": [
+                        "https://sharepoint1.krusty-krab.lab/*"
+                    ],
+                    "grantTypes": [
+                        "AUTHORIZATION_CODE"
+                    ],
+                    "name": "DSP SharePoint Module",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "SECRET",
+                        "secondarySecrets": [],
+                        "secret": "secret"
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
+                    "clientId": "dsp-sharepoint-rer",
+                    "enabled": true,
+                    "redirectUris": [],
+                    "grantTypes": [
+                        "CLIENT_CREDENTIALS"
+                    ],
+                    "name": "DSP SharePoint RER",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "SECRET",
+                        "secondarySecrets": [],
+                        "secret": "secret"
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
+                    "clientId": "dsp-tdf-reader",
+                    "enabled": true,
+                    "redirectUris": [
+                        "https://platform.support-team-krusty-krab.dsp.lab/*"
+                    ],
+                    "grantTypes": [
+                        "RESOURCE_OWNER_CREDENTIALS",
+                        "CLIENT_CREDENTIALS"
+                    ],
+                    "name": "DSP TDF Reader",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "SECRET",
+                        "secondarySecrets": [],
+                        "secret": "secret"
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
+                    "clientId": "dsp-tdf-reader-web",
+                    "enabled": true,
+                    "redirectUris": [
+                        "https://platform.support-team-krusty-krab.dsp.lab/*"
+                    ],
+                    "grantTypes": [
+                        "AUTHORIZATION_CODE"
+                    ],
+                    "name": "DSP TDF Reader Web",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "NONE",
+                        "secondarySecrets": []
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
+                    "clientId": "dsp-web-admin",
+                    "enabled": true,
+                    "redirectUris": [
+                        "https://platform.support-team-krusty-krab.dsp.lab/*"
+                    ],
+                    "grantTypes": [
+                        "AUTHORIZATION_CODE"
+                    ],
+                    "name": "DSP Web Admin",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "NONE",
+                        "secondarySecrets": []
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                },
+                {
+                    "clientId": "tagging-pdp",
+                    "enabled": true,
+                    "redirectUris": [],
+                    "grantTypes": [
+                        "CLIENT_CREDENTIALS"
+                    ],
+                    "name": "Tagging PDP",
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationTime": 0,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeout": 0,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "allowAuthenticationApiInit": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "bypassApprovalPage": true,
+                    "restrictScopes": false,
+                    "requirePushedAuthorizationRequests": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "restrictedScopes": [],
+                    "exclusiveScopes": [],
+                    "restrictedResponseTypes": [],
+                    "authorizationDetailTypes": [],
+                    "defaultAccessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "logoutMode": "NONE",
+                        "pingAccessLogoutCapable": false,
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "clientAuth": {
+                        "type": "SECRET",
+                        "secondarySecrets": [],
+                        "secret": "secret"
+                    },
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requireDpop": false,
+                    "dpopProofSettings": {
+                        "requireNonce": "SERVER_DEFAULT",
+                        "lifetimeSeconds": "SERVER_DEFAULT",
+                        "enforceReplayPrevention": "SERVER_DEFAULT"
+                    },
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "tags": [],
+                    "requireSignedRequests": false
+                }
+            ]
+        },
+        {
+            "resourceType": "/oauth/clientSettings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "clientMetadata": []
                 }
             ]
         },
@@ -1611,74 +2791,373 @@
                 {
                     "attributeSources": [],
                     "attributeContractFulfillment": {
-                        "attributes.needToKnow": {
+                        "sub": {
+                            "source": {
+                                "type": "AUTHENTICATION_POLICY_CONTRACT"
+                            },
+                            "value": "subject"
+                        },
+                        "groups": {
                             "source": {
                                 "type": "NO_MAPPING"
                             }
                         },
-                        "attributes.nationality": {
+                        "given_name": {
                             "source": {
                                 "type": "NO_MAPPING"
                             }
                         },
-                        "attributes.clearance": {
+                        "family_name": {
                             "source": {
                                 "type": "NO_MAPPING"
                             }
                         },
                         "email": {
                             "source": {
-                                "type": "NO_MAPPING"
-                            }
+                                "type": "AUTHENTICATION_POLICY_CONTRACT"
+                            },
+                            "value": "email"
+                        },
+                        "username": {
+                            "source": {
+                                "type": "AUTHENTICATION_POLICY_CONTRACT"
+                            },
+                            "value": "username"
                         }
                     },
                     "issuanceCriteria": {
                         "conditionalCriteria": []
                     },
-                    "id": "client_credentials|dspjwtatm",
+                    "id": "authz_req|apc.oqrptLKkWywuw8vP|dspjwtatm",
                     "context": {
-                        "type": "CLIENT_CREDENTIALS"
+                        "type": "AUTHENTICATION_POLICY_CONTRACT",
+                        "contextRef": {
+                            "id": "oqrptLKkWywuw8vP"
+                        }
                     },
                     "accessTokenManagerRef": {
-                        "id": "dspjwtatm",
-                        "location": "https://pf-admin.support-team-krusty-krab.dsp.lab/pf-admin-api/v1/oauth/accessTokenManagers/dspjwtatm"
+                        "id": "dspjwtatm"
                     }
-                },
+                }
+            ]
+        },
+        {
+            "resourceType": "/authenticationSelectors",
+            "operationType": "SAVE",
+            "items": [
                 {
-                    "attributeSources": [],
-                    "attributeContractFulfillment": {
-                        "attributes.needToKnow": {
-                            "source": {
-                                "type": "NO_MAPPING"
+                    "id": "oauthSelector",
+                    "name": "oauthSelector",
+                    "pluginDescriptorRef": {
+                        "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
+                    },
+                    "configuration": {
+                        "tables": [
+                            {
+                                "name": "Clients",
+                                "rows": [
+                                    {
+                                        "fields": [
+                                            {
+                                                "name": "Client ID",
+                                                "value": "cli-client"
+                                            }
+                                        ],
+                                        "defaultRow": false
+                                    }
+                                ]
+                            }
+                        ],
+                        "fields": []
+                    },
+                    "attributeContract": {}
+                }
+            ]
+        },
+        {
+            "resourceType": "/authenticationApi/settings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "apiEnabled": false,
+                    "enableApiDescriptions": true,
+                    "restrictAccessToRedirectlessMode": false,
+                    "includeRequestContext": false
+                }
+            ]
+        },
+        {
+            "resourceType": "/authenticationPolicies/fragments",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "id": "C8cDise1UO0DXTFI3eqKnahvT",
+                    "name": "fragment1ad",
+                    "rootNode": {
+                        "action": {
+                            "type": "AUTHN_SOURCE",
+                            "authenticationSource": {
+                                "type": "IDP_ADAPTER",
+                                "sourceRef": {
+                                    "id": "htmlform"
+                                }
                             }
                         },
-                        "attributes.nationality": {
-                            "source": {
-                                "type": "NO_MAPPING"
+                        "children": [
+                            {
+                                "action": {
+                                    "type": "DONE",
+                                    "context": "Fail"
+                                }
+                            },
+                            {
+                                "action": {
+                                    "type": "APC_MAPPING",
+                                    "context": "Success",
+                                    "authenticationPolicyContractRef": {
+                                        "id": "oqrptLKkWywuw8vP"
+                                    },
+                                    "attributeMapping": {
+                                        "attributeSources": [],
+                                        "attributeContractFulfillment": {
+                                            "subject": {
+                                                "source": {
+                                                    "type": "ADAPTER",
+                                                    "id": "htmlform"
+                                                },
+                                                "value": "username"
+                                            },
+                                            "email": {
+                                                "source": {
+                                                    "type": "ADAPTER",
+                                                    "id": "htmlform"
+                                                },
+                                                "value": "email"
+                                            },
+                                            "username": {
+                                                "source": {
+                                                    "type": "ADAPTER",
+                                                    "id": "htmlform"
+                                                },
+                                                "value": "username"
+                                            }
+                                        },
+                                        "issuanceCriteria": {
+                                            "conditionalCriteria": []
+                                        }
+                                    }
+                                }
                             }
-                        },
-                        "attributes.clearance": {
-                            "source": {
-                                "type": "NO_MAPPING"
-                            }
-                        },
-                        "email": {
-                            "source": {
-                                "type": "NO_MAPPING"
+                        ]
+                    },
+                    "inputs": {
+                        "id": "oqrptLKkWywuw8vP"
+                    },
+                    "outputs": {
+                        "id": "oqrptLKkWywuw8vP"
+                    }
+                }
+            ]
+        },
+        {
+            "resourceType": "/authenticationPolicies/default",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "failIfNoSelection": false,
+                    "authnSelectionTrees": [
+                        {
+                            "rootNode": {
+                                "action": {
+                                    "type": "AUTHN_SELECTOR",
+                                    "authenticationSelectorRef": {
+                                        "id": "oauthSelector"
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "action": {
+                                            "type": "FRAGMENT",
+                                            "context": "No",
+                                            "fragment": {
+                                                "id": "C8cDise1UO0DXTFI3eqKnahvT"
+                                            },
+                                            "fragmentMapping": {
+                                                "attributeSources": [],
+                                                "attributeContractFulfillment": {
+                                                    "subject": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
+                                                    },
+                                                    "email": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
+                                                    },
+                                                    "username": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
+                                                    }
+                                                },
+                                                "issuanceCriteria": {
+                                                    "conditionalCriteria": []
+                                                }
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "action": {
+                                                    "type": "DONE",
+                                                    "context": "Fail"
+                                                }
+                                            },
+                                            {
+                                                "action": {
+                                                    "type": "APC_MAPPING",
+                                                    "context": "Success",
+                                                    "authenticationPolicyContractRef": {
+                                                        "id": "oqrptLKkWywuw8vP"
+                                                    },
+                                                    "attributeMapping": {
+                                                        "attributeSources": [],
+                                                        "attributeContractFulfillment": {
+                                                            "subject": {
+                                                                "source": {
+                                                                    "type": "FRAGMENT",
+                                                                    "id": "C8cDise1UO0DXTFI3eqKnahvT"
+                                                                },
+                                                                "value": "subject"
+                                                            },
+                                                            "email": {
+                                                                "source": {
+                                                                    "type": "FRAGMENT",
+                                                                    "id": "C8cDise1UO0DXTFI3eqKnahvT"
+                                                                },
+                                                                "value": "email"
+                                                            },
+                                                            "username": {
+                                                                "source": {
+                                                                    "type": "FRAGMENT",
+                                                                    "id": "C8cDise1UO0DXTFI3eqKnahvT"
+                                                                },
+                                                                "value": "username"
+                                                            }
+                                                        },
+                                                        "issuanceCriteria": {
+                                                            "conditionalCriteria": []
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "action": {
+                                            "type": "FRAGMENT",
+                                            "context": "Yes",
+                                            "fragment": {
+                                                "id": "C8cDise1UO0DXTFI3eqKnahvT"
+                                            },
+                                            "fragmentMapping": {
+                                                "attributeSources": [],
+                                                "attributeContractFulfillment": {
+                                                    "subject": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
+                                                    },
+                                                    "email": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
+                                                    },
+                                                    "username": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
+                                                    }
+                                                },
+                                                "issuanceCriteria": {
+                                                    "conditionalCriteria": []
+                                                }
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "action": {
+                                                    "type": "DONE",
+                                                    "context": "Fail"
+                                                }
+                                            },
+                                            {
+                                                "action": {
+                                                    "type": "APC_MAPPING",
+                                                    "context": "Success",
+                                                    "authenticationPolicyContractRef": {
+                                                        "id": "oqrptLKkWywuw8vP"
+                                                    },
+                                                    "attributeMapping": {
+                                                        "attributeSources": [],
+                                                        "attributeContractFulfillment": {
+                                                            "subject": {
+                                                                "source": {
+                                                                    "type": "FRAGMENT",
+                                                                    "id": "C8cDise1UO0DXTFI3eqKnahvT"
+                                                                },
+                                                                "value": "subject"
+                                                            },
+                                                            "email": {
+                                                                "source": {
+                                                                    "type": "FRAGMENT",
+                                                                    "id": "C8cDise1UO0DXTFI3eqKnahvT"
+                                                                },
+                                                                "value": "email"
+                                                            },
+                                                            "username": {
+                                                                "source": {
+                                                                    "type": "FRAGMENT",
+                                                                    "id": "C8cDise1UO0DXTFI3eqKnahvT"
+                                                                },
+                                                                "value": "username"
+                                                            }
+                                                        },
+                                                        "issuanceCriteria": {
+                                                            "conditionalCriteria": []
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "id": "DifUX1koUg5XQuyG7rQWNJOyV",
+                            "name": "policyAD",
+                            "enabled": true,
+                            "handleFailuresLocally": false
+                        }
+                    ],
+                    "defaultAuthenticationSources": [
+                        {
+                            "type": "IDP_ADAPTER",
+                            "sourceRef": {
+                                "id": "http"
                             }
                         }
-                    },
-                    "issuanceCriteria": {
-                        "conditionalCriteria": []
-                    },
-                    "id": "default|dspjwtatm",
-                    "context": {
-                        "type": "DEFAULT"
-                    },
-                    "accessTokenManagerRef": {
-                        "id": "dspjwtatm",
-                        "location": "https://pf-admin.support-team-krusty-krab.dsp.lab/pf-admin-api/v1/oauth/accessTokenManagers/dspjwtatm"
-                    }
+                    ],
+                    "trackedHttpParameters": []
+                }
+            ]
+        },
+        {
+            "resourceType": "/authenticationPolicies/settings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "enableIdpAuthnSelection": true,
+                    "enableSpAuthnSelection": true
                 }
             ]
         }
