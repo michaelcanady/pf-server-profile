@@ -979,7 +979,7 @@
                             },
                             {
                                 "name": "Client ID Claim Name",
-                                "value": "client_id"
+                                "value": "azp"
                             },
                             {
                                 "name": "Scope Claim Name",
