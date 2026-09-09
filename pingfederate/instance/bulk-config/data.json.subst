@@ -1532,7 +1532,7 @@
                                 "description": "ad",
                                 "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
                                 "searchScope": "SUBTREE",
-                                "searchFilter": "cn=${username}",
+                                "searchFilter": "sAMAccountName=${username}",
                                 "searchAttributes": [
                                     "mail",
                                     "sAMAccountName",
@@ -1727,12 +1727,13 @@
                             "description": "ad",
                             "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
                             "searchScope": "SUBTREE",
-                            "searchFilter": "uid=${username}",
+                            "searchFilter": "sAMAccountName=${username}",
                             "searchAttributes": [
                                 "givenName",
                                 "mail",
                                 "sn",
-                                "Subject DN"
+                                "Subject DN",
+                                "sAMAccountName"
                             ],
                             "binaryAttributeSettings": {},
                             "memberOfNestedGroup": false
@@ -1744,14 +1745,14 @@
                                 "type": "LDAP_DATA_STORE",
                                 "id": "ad"
                             },
-                            "value": "mail"
+                            "value": "sAMAccountName"
                         },
                         "USER_KEY": {
                             "source": {
                                 "type": "LDAP_DATA_STORE",
                                 "id": "ad"
                             },
-                            "value": "mail"
+                            "value": "sAMAccountName"
                         }
                     },
                     "issuanceCriteria": {
