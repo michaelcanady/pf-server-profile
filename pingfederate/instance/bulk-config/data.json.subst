@@ -1548,23 +1548,8 @@
                                 "searchAttributes": [
                                     "mail",
                                     "sAMAccountName",
-                                    "Subject DN"
-                                ],
-                                "binaryAttributeSettings": {},
-                                "memberOfNestedGroup": false
-                            },
-                            {
-                                "type": "LDAP",
-                                "dataStoreRef": {
-                                    "id": "krusty-krab-ad"
-                                },
-                                "id": "groups",
-                                "description": "AD group CNs for user",
-                                "baseDn": "DC=krusty-krab,DC=lab",
-                                "searchScope": "SUBTREE",
-                                "searchFilter": "(&(objectClass=group)(member=${Subject DN}))",
-                                "searchAttributes": [
-                                    "cn"
+                                    "Subject DN",
+                                    "memberOf"
                                 ],
                                 "binaryAttributeSettings": {},
                                 "memberOfNestedGroup": false
@@ -1593,10 +1578,9 @@
                             },
                             "realm_access.roles": {
                                 "source": {
-                                    "type": "LDAP_DATA_STORE",
-                                    "id": "groups"
+                                    "type": "EXPRESSION"
                                 },
-                                "value": "cn"
+                                "value": "attrs[\"memberOf\"] != null ? attrs[\"memberOf\"].![#this.split(\",\")[0].replaceAll(\"(?i)^CN=\",\"\")] : null"
                             }
                         },
                         "issuanceCriteria": {
