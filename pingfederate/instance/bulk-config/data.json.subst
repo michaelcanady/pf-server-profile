@@ -1552,22 +1552,6 @@
                                 ],
                                 "binaryAttributeSettings": {},
                                 "memberOfNestedGroup": false
-                            },
-                            {
-                                "type": "LDAP",
-                                "dataStoreRef": {
-                                    "id": "krusty-krab-ad"
-                                },
-                                "id": "groups",
-                                "description": "AD groups by PCV-provided user DN",
-                                "baseDn": "DC=krusty-krab,DC=lab",
-                                "searchScope": "SUBTREE",
-                                "searchFilter": "(&(objectClass=group)(member=${DN}))",
-                                "searchAttributes": [
-                                    "cn"
-                                ],
-                                "binaryAttributeSettings": {},
-                                "memberOfNestedGroup": false
                             }
                         ],
                         "attributeContractFulfillment": {
@@ -1593,10 +1577,9 @@
                             },
                             "realm_access.roles": {
                                 "source": {
-                                    "type": "LDAP_DATA_STORE",
-                                    "id": "groups"
+                                    "type": "TEXT"
                                 },
-                                "value": "cn"
+                                "value": "dsp-standard"
                             }
                         },
                         "issuanceCriteria": {
