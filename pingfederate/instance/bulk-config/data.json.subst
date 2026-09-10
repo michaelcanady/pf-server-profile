@@ -769,6 +769,9 @@
                         },
                         {
                             "name": "username"
+                        },
+                        {
+                            "name": "realm_access.roles"
                         }
                     ]
                 }
@@ -1521,6 +1524,11 @@
                                 "name": "email",
                                 "masked": false,
                                 "pseudonym": false
+                            },
+                            {
+                                "name": "realm_access.roles",
+                                "masked": false,
+                                "pseudonym": false
                             }
                         ],
                         "maskOgnlValues": false
@@ -1540,7 +1548,8 @@
                                 "searchAttributes": [
                                     "mail",
                                     "sAMAccountName",
-                                    "Subject DN"
+                                    "Subject DN",
+                                    "memberOf"
                                 ],
                                 "binaryAttributeSettings": {},
                                 "memberOfNestedGroup": false
@@ -1566,6 +1575,13 @@
                                     "id": "ad"
                                 },
                                 "value": "sAMAccountName"
+                            },
+                            "realm_access.roles": {
+                                "source": {
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
+                                },
+                                "value": "memberOf"
                             }
                         },
                         "issuanceCriteria": {
@@ -2831,9 +2847,9 @@
                         },
                         "realm_access.roles": {
                             "source": {
-                                "type": "TEXT"
+                                "type": "AUTHENTICATION_POLICY_CONTRACT"
                             },
-                            "value": "dsp-standard"
+                            "value": "realm_access.roles"
                         }
                     },
                     "issuanceCriteria": {
@@ -2951,6 +2967,13 @@
                                                     "id": "htmlform"
                                                 },
                                                 "value": "username"
+                                            },
+                                            "realm_access.roles": {
+                                                "source": {
+                                                    "type": "ADAPTER",
+                                                    "id": "htmlform"
+                                                },
+                                                "value": "realm_access.roles"
                                             }
                                         },
                                         "issuanceCriteria": {
