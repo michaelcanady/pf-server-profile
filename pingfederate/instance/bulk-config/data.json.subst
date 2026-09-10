@@ -772,6 +772,15 @@
                         },
                         {
                             "name": "realm_access.roles"
+                        },
+                        {
+                            "name": "attributes.clearance"
+                        },
+                        {
+                            "name": "attributes.nationality"
+                        },
+                        {
+                            "name": "attributes.needToKnow"
                         }
                     ]
                 }
@@ -1079,6 +1088,18 @@
                             },
                             {
                                 "name": "realm_access.roles",
+                                "multiValued": true
+                            },
+                            {
+                                "name": "attributes.clearance",
+                                "multiValued": true
+                            },
+                            {
+                                "name": "attributes.nationality",
+                                "multiValued": true
+                            },
+                            {
+                                "name": "attributes.needToKnow",
                                 "multiValued": true
                             }
                         ]
@@ -1529,6 +1550,21 @@
                                 "name": "realm_access.roles",
                                 "masked": false,
                                 "pseudonym": false
+                            },
+                            {
+                                "name": "attributes.clearance",
+                                "masked": false,
+                                "pseudonym": false
+                            },
+                            {
+                                "name": "attributes.nationality",
+                                "masked": false,
+                                "pseudonym": false
+                            },
+                            {
+                                "name": "attributes.needToKnow",
+                                "masked": false,
+                                "pseudonym": false
                             }
                         ],
                         "maskOgnlValues": false
@@ -1548,7 +1584,10 @@
                                 "searchAttributes": [
                                     "mail",
                                     "sAMAccountName",
-                                    "Subject DN"
+                                    "Subject DN",
+                                    "clearance",
+                                    "nationality",
+                                    "needToKnow"
                                 ],
                                 "binaryAttributeSettings": {},
                                 "memberOfNestedGroup": false
@@ -1579,6 +1618,27 @@
                                 "source": {
                                     "type": "NO_MAPPING"
                                 }
+                            },
+                            "attributes.clearance": {
+                                "source": {
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
+                                },
+                                "value": "clearance"
+                            },
+                            "attributes.nationality": {
+                                "source": {
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
+                                },
+                                "value": "nationality"
+                            },
+                            "attributes.needToKnow": {
+                                "source": {
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
+                                },
+                                "value": "needToKnow"
                             }
                         },
                         "issuanceCriteria": {
@@ -2847,6 +2907,24 @@
                             "source": {
                                 "type": "NO_MAPPING"
                             }
+                        },
+                        "attributes.clearance": {
+                            "source": {
+                                "type": "AUTHENTICATION_POLICY_CONTRACT"
+                            },
+                            "value": "attributes.clearance"
+                        },
+                        "attributes.nationality": {
+                            "source": {
+                                "type": "AUTHENTICATION_POLICY_CONTRACT"
+                            },
+                            "value": "attributes.nationality"
+                        },
+                        "attributes.needToKnow": {
+                            "source": {
+                                "type": "AUTHENTICATION_POLICY_CONTRACT"
+                            },
+                            "value": "attributes.needToKnow"
                         }
                     },
                     "issuanceCriteria": {
@@ -2908,6 +2986,21 @@
                             }
                         },
                         "realm_access.roles": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "attributes.clearance": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "attributes.nationality": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "attributes.needToKnow": {
                             "source": {
                                 "type": "NO_MAPPING"
                             }
@@ -3025,6 +3118,27 @@
                                                     "id": "htmlform"
                                                 },
                                                 "value": "realm_access.roles"
+                                            },
+                                            "attributes.clearance": {
+                                                "source": {
+                                                    "type": "ADAPTER",
+                                                    "id": "htmlform"
+                                                },
+                                                "value": "attributes.clearance"
+                                            },
+                                            "attributes.nationality": {
+                                                "source": {
+                                                    "type": "ADAPTER",
+                                                    "id": "htmlform"
+                                                },
+                                                "value": "attributes.nationality"
+                                            },
+                                            "attributes.needToKnow": {
+                                                "source": {
+                                                    "type": "ADAPTER",
+                                                    "id": "htmlform"
+                                                },
+                                                "value": "attributes.needToKnow"
                                             }
                                         },
                                         "issuanceCriteria": {
@@ -3089,6 +3203,21 @@
                                                         "source": {
                                                             "type": "NO_MAPPING"
                                                         }
+                                                    },
+                                                    "attributes.clearance": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
+                                                    },
+                                                    "attributes.nationality": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
+                                                    },
+                                                    "attributes.needToKnow": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
                                                     }
                                                 },
                                                 "issuanceCriteria": {
@@ -3140,6 +3269,27 @@
                                                                     "id": "C8cDise1UO0DXTFI3eqKnahvT"
                                                                 },
                                                                 "value": "realm_access.roles"
+                                                            },
+                                                            "attributes.clearance": {
+                                                                "source": {
+                                                                    "type": "ADAPTER",
+                                                                    "id": "htmlform"
+                                                                },
+                                                                "value": "attributes.clearance"
+                                                            },
+                                                            "attributes.nationality": {
+                                                                "source": {
+                                                                    "type": "ADAPTER",
+                                                                    "id": "htmlform"
+                                                                },
+                                                                "value": "attributes.nationality"
+                                                            },
+                                                            "attributes.needToKnow": {
+                                                                "source": {
+                                                                    "type": "ADAPTER",
+                                                                    "id": "htmlform"
+                                                                },
+                                                                "value": "attributes.needToKnow"
                                                             }
                                                         },
                                                         "issuanceCriteria": {
@@ -3179,6 +3329,21 @@
                                                         "source": {
                                                             "type": "NO_MAPPING"
                                                         }
+                                                    },
+                                                    "attributes.clearance": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
+                                                    },
+                                                    "attributes.nationality": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
+                                                    },
+                                                    "attributes.needToKnow": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
                                                     }
                                                 },
                                                 "issuanceCriteria": {
@@ -3230,6 +3395,27 @@
                                                                     "id": "C8cDise1UO0DXTFI3eqKnahvT"
                                                                 },
                                                                 "value": "realm_access.roles"
+                                                            },
+                                                            "attributes.clearance": {
+                                                                "source": {
+                                                                    "type": "ADAPTER",
+                                                                    "id": "htmlform"
+                                                                },
+                                                                "value": "attributes.clearance"
+                                                            },
+                                                            "attributes.nationality": {
+                                                                "source": {
+                                                                    "type": "ADAPTER",
+                                                                    "id": "htmlform"
+                                                                },
+                                                                "value": "attributes.nationality"
+                                                            },
+                                                            "attributes.needToKnow": {
+                                                                "source": {
+                                                                    "type": "ADAPTER",
+                                                                    "id": "htmlform"
+                                                                },
+                                                                "value": "attributes.needToKnow"
                                                             }
                                                         },
                                                         "issuanceCriteria": {
