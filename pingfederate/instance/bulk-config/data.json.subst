@@ -1073,6 +1073,10 @@
                             {
                                 "name": "username",
                                 "multiValued": false
+                            },
+                            {
+                                "name": "realm_access.roles",
+                                "multiValued": true
                             }
                         ]
                     },
@@ -2824,6 +2828,12 @@
                                 "type": "AUTHENTICATION_POLICY_CONTRACT"
                             },
                             "value": "username"
+                        },
+                        "realm_access.roles": {
+                            "source": {
+                                "type": "TEXT"
+                            },
+                            "value": "dsp-standard"
                         }
                     },
                     "issuanceCriteria": {
