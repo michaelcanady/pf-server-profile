@@ -1548,8 +1548,7 @@
                                 "searchAttributes": [
                                     "mail",
                                     "sAMAccountName",
-                                    "Subject DN",
-                                    "distinguishedName"
+                                    "Subject DN"
                                 ],
                                 "binaryAttributeSettings": {},
                                 "memberOfNestedGroup": false
@@ -1560,10 +1559,10 @@
                                     "id": "krusty-krab-ad"
                                 },
                                 "id": "groups",
-                                "description": "AD groups by member DN",
+                                "description": "AD groups by PCV-provided user DN",
                                 "baseDn": "DC=krusty-krab,DC=lab",
                                 "searchScope": "SUBTREE",
-                                "searchFilter": "(&(objectClass=group)(member=${distinguishedName}))",
+                                "searchFilter": "(&(objectClass=group)(member=${DN}))",
                                 "searchAttributes": [
                                     "cn"
                                 ],
