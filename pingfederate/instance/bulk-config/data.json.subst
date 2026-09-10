@@ -2862,6 +2862,60 @@
                     "accessTokenManagerRef": {
                         "id": "dspjwtatm"
                     }
+                },
+                {
+                    "id": "dspjwtatm-cc",
+                    "accessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "context": {
+                        "type": "CLIENT_CREDENTIALS",
+                        "contextRef": {
+                            "id": "dspjwtatm"
+                        }
+                    },
+                    "attributeSources": [],
+                    "attributeContractFulfillment": {
+                        "sub": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "groups": {
+                            "source": {
+                                "type": "TEXT"
+                            },
+                            "value": "dsp-org-admin"
+                        },
+                        "given_name": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "family_name": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "email": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "username": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "realm_access.roles": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        }
+                    },
+                    "issuanceCriteria": {
+                        "conditionalCriteria": []
+                    }
                 }
             ]
         },
