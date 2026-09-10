@@ -1577,9 +1577,8 @@
                             },
                             "realm_access.roles": {
                                 "source": {
-                                    "type": "TEXT"
-                                },
-                                "value": "dsp-standard"
+                                    "type": "NO_MAPPING"
+                                }
                             }
                         },
                         "issuanceCriteria": {
@@ -2818,8 +2817,9 @@
                         },
                         "groups": {
                             "source": {
-                                "type": "NO_MAPPING"
-                            }
+                                "type": "TEXT"
+                            },
+                            "value": "dsp-standard"
                         },
                         "given_name": {
                             "source": {
@@ -2845,9 +2845,8 @@
                         },
                         "realm_access.roles": {
                             "source": {
-                                "type": "AUTHENTICATION_POLICY_CONTRACT"
-                            },
-                            "value": "realm_access.roles"
+                                "type": "NO_MAPPING"
+                            }
                         }
                     },
                     "issuanceCriteria": {
