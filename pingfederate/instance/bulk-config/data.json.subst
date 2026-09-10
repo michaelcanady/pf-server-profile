@@ -1578,9 +1578,10 @@
                             },
                             "realm_access.roles": {
                                 "source": {
-                                    "type": "EXPRESSION"
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
                                 },
-                                "value": "attrs[\"memberOf\"] != null ? attrs[\"memberOf\"].![#this.split(\",\")[0].replaceAll(\"(?i)^CN=\",\"\")] : null"
+                                "value": "memberOf"
                             }
                         },
                         "issuanceCriteria": {
@@ -2846,9 +2847,9 @@
                         },
                         "realm_access.roles": {
                             "source": {
-                                "type": "AUTHENTICATION_POLICY_CONTRACT"
+                                "type": "EXPRESSION"
                             },
-                            "value": "realm_access.roles"
+                            "value": "#roles = grant.getAttributeValues(\"realm_access.roles\"), #roles != null ? #roles.![#this.split(\",\")[0].replaceAll(\"(?i)^CN=\",\"\")] : null"
                         }
                     },
                     "issuanceCriteria": {
