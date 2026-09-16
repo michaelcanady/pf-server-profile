@@ -3686,9 +3686,6 @@
             "items": [
                 {
                     "id": "krustykrabpcv",
-                    "passwordCredentialValidatorRef": {
-                        "id": "krustykrabpcv"
-                    },
                     "attributeSources": [
                         {
                             "type": "LDAP",
