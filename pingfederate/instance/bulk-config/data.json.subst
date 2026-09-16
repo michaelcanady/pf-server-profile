@@ -1968,7 +1968,7 @@
                                 "description": "ad",
                                 "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
                                 "searchScope": "SUBTREE",
-                                "searchFilter": "sAMAccountName=${USER_KEY}",
+                                "searchFilter": "sAMAccountName=${sub}",
                                 "searchAttributes": [
                                     "mail",
                                     "sAMAccountName",
