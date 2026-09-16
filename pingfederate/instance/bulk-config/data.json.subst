@@ -3068,15 +3068,12 @@
                     }
                 },
                 {
-                    "id": "dspjwtatm-cc",
+                    "id": "client_credentials|dspjwtatm",
                     "accessTokenManagerRef": {
                         "id": "dspjwtatm"
                     },
                     "context": {
-                        "type": "CLIENT_CREDENTIALS",
-                        "contextRef": {
-                            "id": "dspjwtatm"
-                        }
+                        "type": "CLIENT_CREDENTIALS"
                     },
                     "attributeSources": [],
                     "attributeContractFulfillment": {
@@ -3132,6 +3129,87 @@
                             }
                         },
                         "name": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        }
+                    },
+                    "issuanceCriteria": {
+                        "conditionalCriteria": []
+                    }
+                },
+                {
+                    "id": "password|krustykrabpcv|dspjwtatm",
+                    "context": {
+                        "type": "PCV",
+                        "contextRef": {
+                            "id": "krustykrabpcv"
+                        }
+                    },
+                    "accessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "attributeSources": [],
+                    "attributeContractFulfillment": {
+                        "sub": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "username"
+                        },
+                        "username": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "username"
+                        },
+                        "email": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "mail"
+                        },
+                        "given_name": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "givenName"
+                        },
+                        "family_name": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "name": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "displayName"
+                        },
+                        "clearance": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "clearance"
+                        },
+                        "nationality": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "nationality"
+                        },
+                        "needToKnow": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "needToKnow"
+                        },
+                        "groups": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "realm_access.roles": {
                             "source": {
                                 "type": "NO_MAPPING"
                             }
@@ -3721,6 +3799,9 @@
                     },
                     "issuanceCriteria": {
                         "conditionalCriteria": []
+                    },
+                    "passwordValidatorRef": {
+                        "id": "krustykrabpcv"
                     }
                 }
             ]
