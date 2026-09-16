@@ -1171,6 +1171,11 @@
                             "name": "email",
                             "description": "OpenID Connect email",
                             "dynamic": false
+                        },
+                        {
+                            "name": "offline_access",
+                            "description": "Offline access (refresh tokens)",
+                            "dynamic": false
                         }
                     ],
                     "scopeGroups": [],
@@ -1931,16 +1936,69 @@
                                 "multiValued": false
                             }
                         ],
-                        "extendedAttributes": []
+                        "extendedAttributes": [
+                            {
+                                "name": "email",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "preferred_username",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "name",
+                                "multiValued": false
+                            }
+                        ]
                     },
                     "attributeMapping": {
-                        "attributeSources": [],
+                        "attributeSources": [
+                            {
+                                "type": "LDAP",
+                                "dataStoreRef": {
+                                    "id": "krusty-krab-ad"
+                                },
+                                "id": "ad",
+                                "description": "ad",
+                                "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
+                                "searchScope": "SUBTREE",
+                                "searchFilter": "sAMAccountName=${USER_KEY}",
+                                "searchAttributes": [
+                                    "mail",
+                                    "sAMAccountName",
+                                    "displayName"
+                                ],
+                                "binaryAttributeSettings": {},
+                                "memberOfNestedGroup": false
+                            }
+                        ],
                         "attributeContractFulfillment": {
                             "sub": {
                                 "source": {
                                     "type": "OAUTH_PERSISTENT_GRANT"
                                 },
                                 "value": "USER_KEY"
+                            },
+                            "email": {
+                                "source": {
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
+                                },
+                                "value": "mail"
+                            },
+                            "preferred_username": {
+                                "source": {
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
+                                },
+                                "value": "sAMAccountName"
+                            },
+                            "name": {
+                                "source": {
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
+                                },
+                                "value": "displayName"
                             }
                         },
                         "issuanceCriteria": {
@@ -2118,7 +2176,8 @@
                         "http://127.0.0.1:*"
                     ],
                     "grantTypes": [
-                        "AUTHORIZATION_CODE"
+                        "AUTHORIZATION_CODE",
+                        "REFRESH_TOKEN"
                     ],
                     "name": "DSP Desktop",
                     "refreshRolling": "SERVER_DEFAULT",
