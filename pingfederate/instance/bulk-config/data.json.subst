@@ -3717,12 +3717,6 @@
                                 "type": "PASSWORD_CREDENTIAL_VALIDATOR"
                             },
                             "value": "username"
-                        },
-                        "USER_NAME": {
-                            "source": {
-                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
-                            },
-                            "value": "username"
                         }
                     },
                     "issuanceCriteria": {
