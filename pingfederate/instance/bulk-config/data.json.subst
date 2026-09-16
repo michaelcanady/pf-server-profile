@@ -2236,10 +2236,7 @@
                     "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
                     "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
                     "tags": [],
-                    "requireSignedRequests": false,
-                    "passwordCredentialValidatorRef": {
-                        "id": "krustykrabpcv"
-                    }
+                    "requireSignedRequests": false
                 },
                 {
                     "clientId": "dsp-outlook",
