@@ -1107,6 +1107,10 @@
                             {
                                 "name": "needToKnow",
                                 "multiValued": true
+                            },
+                            {
+                                "name": "name",
+                                "multiValued": false
                             }
                         ]
                     },
@@ -2959,6 +2963,12 @@
                                 "type": "AUTHENTICATION_POLICY_CONTRACT"
                             },
                             "value": "needToKnow"
+                        },
+                        "name": {
+                            "source": {
+                                "type": "EXPRESSION"
+                            },
+                            "value": "#context.get('given_name') + ' ' + #context.get('family_name')"
                         }
                     },
                     "issuanceCriteria": {
@@ -3035,6 +3045,11 @@
                             }
                         },
                         "needToKnow": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "name": {
                             "source": {
                                 "type": "NO_MAPPING"
                             }
