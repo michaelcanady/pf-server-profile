@@ -787,6 +787,9 @@
                         },
                         {
                             "name": "family_name"
+                        },
+                        {
+                            "name": "name"
                         }
                     ]
                 }
@@ -1585,6 +1588,11 @@
                                 "name": "family_name",
                                 "masked": false,
                                 "pseudonym": false
+                            },
+                            {
+                                "name": "name",
+                                "masked": false,
+                                "pseudonym": false
                             }
                         ],
                         "maskOgnlValues": false
@@ -1609,7 +1617,8 @@
                                     "nationality",
                                     "needToKnow",
                                     "givenName",
-                                    "sn"
+                                    "sn",
+                                    "displayName"
                                 ],
                                 "binaryAttributeSettings": {},
                                 "memberOfNestedGroup": false
@@ -1675,6 +1684,13 @@
                                     "id": "ad"
                                 },
                                 "value": "sn"
+                            },
+                            "name": {
+                                "source": {
+                                    "type": "LDAP_DATA_STORE",
+                                    "id": "ad"
+                                },
+                                "value": "displayName"
                             }
                         },
                         "issuanceCriteria": {
@@ -2966,9 +2982,9 @@
                         },
                         "name": {
                             "source": {
-                                "type": "EXPRESSION"
+                                "type": "AUTHENTICATION_POLICY_CONTRACT"
                             },
-                            "value": "#context.get('given_name') + ' ' + #context.get('family_name')"
+                            "value": "name"
                         }
                     },
                     "issuanceCriteria": {
@@ -3202,6 +3218,13 @@
                                                     "id": "htmlform"
                                                 },
                                                 "value": "family_name"
+                                            },
+                                            "name": {
+                                                "source": {
+                                                    "type": "ADAPTER",
+                                                    "id": "htmlform"
+                                                },
+                                                "value": "name"
                                             }
                                         },
                                         "issuanceCriteria": {
@@ -3291,6 +3314,11 @@
                                                         "source": {
                                                             "type": "NO_MAPPING"
                                                         }
+                                                    },
+                                                    "name": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
                                                     }
                                                 },
                                                 "issuanceCriteria": {
@@ -3377,6 +3405,13 @@
                                                                     "id": "C8cDise1UO0DXTFI3eqKnahvT"
                                                                 },
                                                                 "value": "family_name"
+                                                            },
+                                                            "name": {
+                                                                "source": {
+                                                                    "type": "FRAGMENT",
+                                                                    "id": "C8cDise1UO0DXTFI3eqKnahvT"
+                                                                },
+                                                                "value": "name"
                                                             }
                                                         },
                                                         "issuanceCriteria": {
@@ -3441,6 +3476,11 @@
                                                         "source": {
                                                             "type": "NO_MAPPING"
                                                         }
+                                                    },
+                                                    "name": {
+                                                        "source": {
+                                                            "type": "NO_MAPPING"
+                                                        }
                                                     }
                                                 },
                                                 "issuanceCriteria": {
@@ -3527,6 +3567,13 @@
                                                                     "id": "C8cDise1UO0DXTFI3eqKnahvT"
                                                                 },
                                                                 "value": "family_name"
+                                                            },
+                                                            "name": {
+                                                                "source": {
+                                                                    "type": "FRAGMENT",
+                                                                    "id": "C8cDise1UO0DXTFI3eqKnahvT"
+                                                                },
+                                                                "value": "name"
                                                             }
                                                         },
                                                         "issuanceCriteria": {
