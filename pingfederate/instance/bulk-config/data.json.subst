@@ -906,6 +906,12 @@
                             },
                             {
                                 "name": "clearance"
+                            },
+                            {
+                                "name": "displayName"
+                            },
+                            {
+                                "name": "sn"
                             }
                         ]
                     }
@@ -2177,7 +2183,8 @@
                     ],
                     "grantTypes": [
                         "AUTHORIZATION_CODE",
-                        "REFRESH_TOKEN"
+                        "REFRESH_TOKEN",
+                        "RESOURCE_OWNER_CREDENTIALS"
                     ],
                     "name": "DSP Desktop",
                     "refreshRolling": "SERVER_DEFAULT",
@@ -2229,7 +2236,10 @@
                     "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
                     "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
                     "tags": [],
-                    "requireSignedRequests": false
+                    "requireSignedRequests": false,
+                    "passwordCredentialValidatorRef": {
+                        "id": "krustykrabpcv"
+                    }
                 },
                 {
                     "clientId": "dsp-outlook",
@@ -3128,6 +3138,89 @@
                             "source": {
                                 "type": "NO_MAPPING"
                             }
+                        }
+                    },
+                    "issuanceCriteria": {
+                        "conditionalCriteria": []
+                    }
+                },
+                {
+                    "id": "dspjwtatm-ropc",
+                    "context": {
+                        "type": "RESOURCE_OWNER_CREDENTIALS",
+                        "contextRef": {
+                            "id": "krustykrabpcv"
+                        }
+                    },
+                    "accessTokenManagerRef": {
+                        "id": "dspjwtatm"
+                    },
+                    "attributeSources": [],
+                    "attributeContractFulfillment": {
+                        "sub": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "username"
+                        },
+                        "email": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "mail"
+                        },
+                        "given_name": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "givenName"
+                        },
+                        "family_name": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "sn"
+                        },
+                        "username": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "username"
+                        },
+                        "name": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "displayName"
+                        },
+                        "groups": {
+                            "source": {
+                                "type": "TEXT"
+                            },
+                            "value": "dsp-standard"
+                        },
+                        "realm_access.roles": {
+                            "source": {
+                                "type": "NO_MAPPING"
+                            }
+                        },
+                        "clearance": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "clearance"
+                        },
+                        "nationality": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "nationality"
+                        },
+                        "needToKnow": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "needToKnow"
                         }
                     },
                     "issuanceCriteria": {
