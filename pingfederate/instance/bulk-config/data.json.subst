@@ -2981,6 +2981,54 @@
             ]
         },
         {
+            "resourceType": "/oauth/resourceOwnerCredentialsMappings",
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "id": "krustykrabpcv",
+                    "attributeSources": [
+                        {
+                            "type": "LDAP",
+                            "dataStoreRef": {
+                                "id": "krusty-krab-ad"
+                            },
+                            "id": "ad",
+                            "description": "ad",
+                            "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
+                            "searchScope": "SUBTREE",
+                            "searchFilter": "sAMAccountName=${username}",
+                            "searchAttributes": [
+                                "mail",
+                                "givenName",
+                                "sn",
+                                "displayName",
+                                "clearance",
+                                "nationality",
+                                "needToKnow",
+                                "sAMAccountName"
+                            ],
+                            "binaryAttributeSettings": {},
+                            "memberOfNestedGroup": false
+                        }
+                    ],
+                    "attributeContractFulfillment": {
+                        "USER_KEY": {
+                            "source": {
+                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
+                            },
+                            "value": "username"
+                        }
+                    },
+                    "issuanceCriteria": {
+                        "conditionalCriteria": []
+                    },
+                    "passwordValidatorRef": {
+                        "id": "krustykrabpcv"
+                    }
+                }
+            ]
+        },
+        {
             "resourceType": "/oauth/accessTokenMappings",
             "operationType": "SAVE",
             "items": [
@@ -3755,54 +3803,6 @@
                 {
                     "enableIdpAuthnSelection": true,
                     "enableSpAuthnSelection": true
-                }
-            ]
-        },
-        {
-            "resourceType": "/oauth/resourceOwnerCredentialsMappings",
-            "operationType": "SAVE",
-            "items": [
-                {
-                    "id": "krustykrabpcv",
-                    "attributeSources": [
-                        {
-                            "type": "LDAP",
-                            "dataStoreRef": {
-                                "id": "krusty-krab-ad"
-                            },
-                            "id": "ad",
-                            "description": "ad",
-                            "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
-                            "searchScope": "SUBTREE",
-                            "searchFilter": "sAMAccountName=${username}",
-                            "searchAttributes": [
-                                "mail",
-                                "givenName",
-                                "sn",
-                                "displayName",
-                                "clearance",
-                                "nationality",
-                                "needToKnow",
-                                "sAMAccountName"
-                            ],
-                            "binaryAttributeSettings": {},
-                            "memberOfNestedGroup": false
-                        }
-                    ],
-                    "attributeContractFulfillment": {
-                        "USER_KEY": {
-                            "source": {
-                                "type": "PASSWORD_CREDENTIAL_VALIDATOR"
-                            },
-                            "value": "username"
-                        }
-                    },
-                    "issuanceCriteria": {
-                        "conditionalCriteria": []
-                    },
-                    "passwordValidatorRef": {
-                        "id": "krustykrabpcv"
-                    }
                 }
             ]
         }
