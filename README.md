@@ -25,6 +25,7 @@ every variable below or the bulk import substitutes empty values.
 | `serverSettings_systemKeys_items_pending_keyData` | PingFederate pending system key |
 | `ldap_ad_bind_dn` | AD/LDAP bind DN |
 | `ldap_ad_bind_password` | AD/LDAP bind password |
+| `client_secret` | Shared OAuth client secret applied to every PF OAuth client. Must match the value the Keycloak realm import and platform PEP configs use. |
 
 ### Topology variables (non-secret)
 

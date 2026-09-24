@@ -2157,7 +2157,7 @@
                     "clientAuth": {
                         "type": "SECRET",
                         "secondarySecrets": [],
-                        "secret": "secret"
+                        "secret": "${client_secret}"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -2280,7 +2280,7 @@
                     "clientAuth": {
                         "type": "SECRET",
                         "secondarySecrets": [],
-                        "secret": "secret"
+                        "secret": "${client_secret}"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -2463,7 +2463,7 @@
                     "clientAuth": {
                         "type": "SECRET",
                         "secondarySecrets": [],
-                        "secret": "secret"
+                        "secret": "${client_secret}"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -2584,7 +2584,7 @@
                     "clientAuth": {
                         "type": "SECRET",
                         "secondarySecrets": [],
-                        "secret": "secret"
+                        "secret": "${client_secret}"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -2646,7 +2646,7 @@
                     "clientAuth": {
                         "type": "SECRET",
                         "secondarySecrets": [],
-                        "secret": "secret"
+                        "secret": "${client_secret}"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -2706,7 +2706,7 @@
                     "clientAuth": {
                         "type": "SECRET",
                         "secondarySecrets": [],
-                        "secret": "secret"
+                        "secret": "${client_secret}"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -2769,7 +2769,7 @@
                     "clientAuth": {
                         "type": "SECRET",
                         "secondarySecrets": [],
-                        "secret": "secret"
+                        "secret": "${client_secret}"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
@@ -2951,7 +2951,7 @@
                     "clientAuth": {
                         "type": "SECRET",
                         "secondarySecrets": [],
-                        "secret": "secret"
+                        "secret": "${client_secret}"
                     },
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "requireProofKeyForCodeExchange": false,
