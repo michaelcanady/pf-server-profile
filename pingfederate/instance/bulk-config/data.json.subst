@@ -262,7 +262,7 @@
             "operationType": "SAVE",
             "items": [
                 {
-                    "licenseAgreementUrl": "https://pf-admin.support-team-krusty-krab.dsp.lab/pf-admin-api/license-agreement",
+                    "licenseAgreementUrl": "https://pf-admin.${lab_domain}/pf-admin-api/license-agreement",
                     "accepted": true
                 }
             ]
@@ -350,11 +350,11 @@
                     "id": "krusty-krab-ad",
                     "maskAttributeValues": false,
                     "hostnames": [
-                        "domain1.krusty-krab.lab:389"
+                        "${ldap_ad_hostname}"
                     ],
                     "ldapType": "ACTIVE_DIRECTORY",
                     "bindAnonymously": false,
-                    "userDN": "CN=Administrator,CN=Users,DC=krusty-krab,DC=lab",
+                    "userDN": "${ldap_ad_bind_dn}",
                     "useSsl": false,
                     "useDnsSrvRecords": false,
                     "followLDAPReferrals": false,
@@ -362,7 +362,7 @@
                     "hostnamesTags": [
                         {
                             "hostnames": [
-                                "domain1.krusty-krab.lab:389"
+                                "${ldap_ad_hostname}"
                             ],
                             "defaultSource": true
                         }
@@ -383,7 +383,7 @@
                     "ldapDnsSrvPrefix": "_ldap._tcp",
                     "ldapsDnsSrvPrefix": "_ldaps._tcp",
                     "useStartTLS": false,
-                    "password": "vUser1234!"
+                    "password": "${ldap_ad_bind_password}"
                 }
             ]
         },
@@ -439,7 +439,7 @@
                         "enableIdpDiscovery": true
                     },
                     "federationInfo": {
-                        "baseUrl": "https://pf.support-team-krusty-krab.dsp.lab",
+                        "baseUrl": "https://pf.${lab_domain}",
                         "saml2EntityId": "evaluation",
                         "saml1xIssuerId": "",
                         "saml1xSourceId": "",
@@ -819,7 +819,7 @@
                             },
                             {
                                 "name": "Search Base",
-                                "value": "CN=Users,DC=krusty-krab,DC=lab"
+                                "value": "CN=Users,${ldap_ad_base_dn}"
                             },
                             {
                                 "name": "Search Filter",
@@ -1022,11 +1022,11 @@
                             },
                             {
                                 "name": "Issuer Claim Value",
-                                "value": "https://pf.support-team-krusty-krab.dsp.lab"
+                                "value": "https://pf.${lab_domain}"
                             },
                             {
                                 "name": "Audience Claim Value",
-                                "value": "https://platform.support-team-krusty-krab.dsp.lab"
+                                "value": "https://platform.${lab_domain}"
                             },
                             {
                                 "name": "Not Before Claim Offset",
@@ -1129,7 +1129,7 @@
                     },
                     "selectionSettings": {
                         "resourceUris": [
-                            "https://platform.support-team-krusty-krab.dsp.lab"
+                            "https://platform.${lab_domain}"
                         ]
                     },
                     "accessControlSettings": {
@@ -1217,7 +1217,7 @@
                     "bypassAuthorizationForApprovedGrants": false,
                     "allowUnidentifiedClientROCreds": false,
                     "allowUnidentifiedClientExtensionGrants": false,
-                    "tokenEndpointBaseUrl": "https://pf.support-team-krusty-krab.dsp.lab",
+                    "tokenEndpointBaseUrl": "https://pf.${lab_domain}",
                     "requireOfflineAccessScopeToIssueRefreshTokens": false,
                     "offlineAccessRequireConsentPrompt": false,
                     "userAuthorizationUrl": "",
@@ -1617,7 +1617,7 @@
                                 },
                                 "id": "ad",
                                 "description": "ad",
-                                "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
+                                "baseDn": "CN=Users,${ldap_ad_base_dn}",
                                 "searchScope": "SUBTREE",
                                 "searchFilter": "sAMAccountName=${username}",
                                 "searchAttributes": [
@@ -1865,7 +1865,7 @@
                             },
                             "id": "ad",
                             "description": "ad",
-                            "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
+                            "baseDn": "CN=Users,${ldap_ad_base_dn}",
                             "searchScope": "SUBTREE",
                             "searchFilter": "sAMAccountName=${username}",
                             "searchAttributes": [
@@ -1966,7 +1966,7 @@
                                 },
                                 "id": "ad",
                                 "description": "ad",
-                                "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
+                                "baseDn": "CN=Users,${ldap_ad_base_dn}",
                                 "searchScope": "SUBTREE",
                                 "searchFilter": "sAMAccountName=${sub}",
                                 "searchAttributes": [
@@ -2302,7 +2302,7 @@
                     "clientId": "dsp-outlook-auth",
                     "enabled": true,
                     "redirectUris": [
-                        "https://platform.support-team-krusty-krab.dsp.lab/*"
+                        "https://platform.${lab_domain}/*"
                     ],
                     "grantTypes": [
                         "AUTHORIZATION_CODE",
@@ -2485,7 +2485,7 @@
                     "clientId": "dsp-secure-viewer-web",
                     "enabled": true,
                     "redirectUris": [
-                        "https://platform.support-team-krusty-krab.dsp.lab/*"
+                        "https://platform.${lab_domain}/*"
                     ],
                     "grantTypes": [
                         "AUTHORIZATION_CODE"
@@ -2606,7 +2606,7 @@
                     "clientId": "dsp-sharepoint-module",
                     "enabled": true,
                     "redirectUris": [
-                        "https://sharepoint1.krusty-krab.lab/*"
+                        "https://${sharepoint_host}/*"
                     ],
                     "grantTypes": [
                         "AUTHORIZATION_CODE"
@@ -2728,7 +2728,7 @@
                     "clientId": "dsp-tdf-reader",
                     "enabled": true,
                     "redirectUris": [
-                        "https://platform.support-team-krusty-krab.dsp.lab/*"
+                        "https://platform.${lab_domain}/*"
                     ],
                     "grantTypes": [
                         "RESOURCE_OWNER_CREDENTIALS",
@@ -2791,7 +2791,7 @@
                     "clientId": "dsp-tdf-reader-web",
                     "enabled": true,
                     "redirectUris": [
-                        "https://platform.support-team-krusty-krab.dsp.lab/*"
+                        "https://platform.${lab_domain}/*"
                     ],
                     "grantTypes": [
                         "AUTHORIZATION_CODE"
@@ -2852,7 +2852,7 @@
                     "clientId": "dsp-web-admin",
                     "enabled": true,
                     "redirectUris": [
-                        "https://platform.support-team-krusty-krab.dsp.lab/*"
+                        "https://platform.${lab_domain}/*"
                     ],
                     "grantTypes": [
                         "AUTHORIZATION_CODE"
@@ -2994,7 +2994,7 @@
                             },
                             "id": "ad",
                             "description": "ad",
-                            "baseDn": "CN=Users,DC=krusty-krab,DC=lab",
+                            "baseDn": "CN=Users,${ldap_ad_base_dn}",
                             "searchScope": "SUBTREE",
                             "searchFilter": "sAMAccountName=${username}",
                             "searchAttributes": [
