@@ -328,14 +328,14 @@
                     "type": "JDBC",
                     "id": "ProvisionerDS",
                     "maskAttributeValues": false,
-                    "connectionUrl": "jdbc:postgresql://pf-db-rw:5432/pingfederate",
-                    "driverClass": "org.postgresql.Driver",
-                    "userName": "dsp",
+                    "connectionUrl": "${pf_db_url}",
+                    "driverClass": "${pf_db_driver}",
+                    "userName": "${pf_db_user}",
                     "allowMultiValueAttributes": false,
-                    "name": "ProvisionerDS (dsp)",
+                    "name": "ProvisionerDS",
                     "connectionUrlTags": [
                         {
-                            "connectionUrl": "jdbc:postgresql://pf-db-rw:5432/pingfederate",
+                            "connectionUrl": "${pf_db_url}",
                             "defaultSource": true
                         }
                     ],
