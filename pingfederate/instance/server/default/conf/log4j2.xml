@@ -40,8 +40,7 @@
    | Misconfiguration may cause PingFederate to enter a degraded state.
 -->
 <Configuration monitorInterval="30"
-               packages="com.pingidentity.log4j.pattern,com.pingidentity.log4j.layout,com.pingidentity.log4j.appender"
-               shutdownHook="disable">
+               packages="com.pingidentity.log4j.pattern,com.pingidentity.log4j.layout,com.pingidentity.log4j.appender">
     <Appenders>
 
         <!-- ============================== -->
